@@ -1,134 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wendy Francisco - Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wendy Francisco | Virtual Assistant</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<div class="container">
-  <!-- LEFT PROFILE SIDE -->
-  <div class="profile" id="profile">
-    <img src="wendu.jpg" alt="Wendy">
-    <div>
-      <h1>Wendy Francisco</h1>
-      <p>General Virtual Assistant</p>
+  <div class="header">
+    <div class="header-inner">
+      <div class="profile-container">
+        <img src="wendu.jpg" alt="Profile" class="profile-img">
+        <div class="name-role">
+          <div class="name">WENDY FRANCISCO</div>
+          <div class="role">General Virtual Assistant</div>
+        </div>
+      </div>
+      <div class="tabs">
+        <a href="#about" class="tab">ABOUT ME</a>
+        <a href="#portfolio" class="tab">PORTFOLIO</a>
+        <a href="#contact" class="tab">CONTACT</a>
+      </div>
     </div>
   </div>
 
-  <!-- RIGHT SIDE CONTENT -->
-  <div class="right-content" id="rightContent">
-    <div class="nav">
-      <a href="#about">About Me</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+  <div class="main-content">
+    <!-- ABOUT SECTION -->
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <p>My name is Wendy, a dedicated mother of three and a third-year Bachelor of Science in Information Technology 
+        student at Cavite State University – Silang Campus, Cavite, Philippines.
+      </p><br>
+      <p>I bring over seven years of experience as a Registrar Staff member in a higher education institution, 
+        where I developed a strong foundation in administrative operations and honed my technical skills. 
+        This background has equipped me with the ability to manage tasks efficiently, communicate effectively, 
+        and adapt to dynamic work environments.
+      </p><br>
+      <p>I am a reliable, consistent, and hard-working individual, seeking an opportunity to contribute meaningfully 
+        to your organization. With my combined experience and academic training, I am confident in my ability to excel 
+        in the position I am applying for.
+      </p>
     </div>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m Wendy, a mother of three, and I’m currently in my third year of college, 
-        studying for a Bachelor of Science degree in Information Technology. 
-        I have over 7 years of experience as a Registrar Staff member in a college setting.
-        I bring together administrative expertise and technical skills. My experience in educational 
-        administration has honed my abilities in data management, report creation, and student services.
-        My ongoing IT education keeps me updated with the latest technologies and best practices.
-      </p>
-    </section>
-
-    <section id="portfolio">
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio" class="section">
       <h2>Portfolio</h2>
       <div class="projects">
+
+        <!-- Project 1 -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front project-card">
-              <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Project 1">
-              <h3>Korean Girl Cartoon 2025 Calendar Design</h3>
-              <p>
-                A playful 2025 calendar featuring hand-drawn Korean girl cartoons... 
-                <span class="see-more">See more</span>
-              </p>
+              <img src="Calendar.png" alt="Project 1">
+              <h3>Korean Girl Cartoon 2025 Calendar</h3>
             </div>
             <div class="flip-card-back project-card">
-              <p>
-                Full project description here. You can include everything from your original long paragraph.
-              </p>
-              <span class="see-less">See less</span>
+              <p>Features 12 unique Korean-style cartoon girl illustrations for each month, created using Procreate and InDesign.</p>
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Project 2">
-          <h3>Project 02</h3>
-          <p>Monochrome landscapes shot across the country.</p>
+
+        <!-- Project 2 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front project-card">
+              <img src="mockup1.png" alt="Project 2">
+              <h3>Social Media Template Pack</h3>
+              <p>Eye-catching Canva templates for business pages.</p>
+            </div>
+            <div class="flip-card-back project-card">
+              <p>Customizable Canva templates for promoting small businesses. Includes Instagram, Facebook, and Pinterest post designs.</p>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Project 3">
-          <h3>Project 03</h3>
-          <p>Conceptual portraits inspired by urban solitude.</p>
+
+        <!-- Project 3 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front project-card">
+              <img src="mockup2.png" alt="Project 3">
+              <h3>Logo and Branding Kit</h3>
+              <p>Minimalist logo set with color palette and icons.</p>
+            </div>
+            <div class="flip-card-back project-card">
+              <p>Designed branding kit with logo variations, font pairing, and color codes to establish consistent identity for startups.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="contact">
+    <!-- CONTACT SECTION -->
+    <div id="contact" class="section">
       <h2>Contact</h2>
-      <div class="contact-info">
-        <div class="contact-row">
-          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wendytm013@gmail.com" target="_blank">wendytm013@gmail.com</a>
-        </div>
-        <div class="contact-row">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Upwork">
-          <a href="https://www.upwork.com/freelancers/~01024feee67ee4a9c4?mp_source=share" target="_blank">Upwork Profile</a>
-        </div>
-        <div class="contact-row">
-          <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone">
-          <span>0915 427 9190</span>
-        </div>
-      </div>
-    </section>
+      <p><strong>Email:</strong> wendytm013@gmail.com</p>
+      <p><strong>Phone:</strong> +63935 487 9190</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/wendyfrancisco" target="_blank">linkedin.com/in/wendyfrancisco</a></p>
+
+      <br><br>
+      <p><strong>Send Me a Message</strong></p>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
-</div>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const profile = document.getElementById("profile");
-    const aboutSection = document.getElementById("about");
-    const rightContent = document.getElementById("rightContent");
-
-    const scrollPosition = window.pageYOffset;
-    const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
-
-    if (scrollPosition > aboutBottom - 100) {
-      profile.classList.add("animate-away");
-      rightContent.classList.add("expand");
-    } else {
-      profile.classList.remove("animate-away");
-      rightContent.classList.remove("expand");
-    }
-  });
-
-  document.querySelectorAll('.see-more').forEach(link => {
-    link.addEventListener('click', function () {
-      const card = link.closest('.flip-card');
-      card.classList.add('flipped', 'expanded');
+  <script>
+    const header = document.querySelector('.header');
+    const profileContainer = document.querySelector('.profile-container');
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.section');
+  
+    // Shrink header & hide profile picture on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+        profileContainer.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+        profileContainer.classList.remove('scrolled');
+      }
+  
+      // Highlight active nav tab (with offset to avoid early highlight)
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - 200 && window.scrollY < sectionTop + sectionHeight - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+  
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('href') === `#${current}`) {
+          tab.classList.add('active');
+        }
+      });
     });
-  });
-
-    // Flip back on "See Less"
-    document.querySelectorAll('.see-less').forEach(link => {
-    link.addEventListener('click', function () {
-      const card = link.closest('.flip-card');
-      card.classList.remove('flipped', 'expanded');
-    });
-  });
-
-</script>
-
+  </script>
+  
+  
+  
 </body>
 </html>
-
-

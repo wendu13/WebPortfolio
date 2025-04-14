@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Wendy Francisco | Virtual Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="sample.css">
 </head>
 <body>
@@ -11,16 +13,17 @@
   <div class="header">
     <div class="header-inner">
       <div class="profile-container">
-        <img src="wendu.jpg" alt="Profile" class="profile-img">
+        <img src="wendu.jpg" alt="Wendy Francisco profile photo" class="profile-img">
         <div class="name-role">
           <div class="name">WENDY FRANCISCO</div>
           <div class="role">General Virtual Assistant</div>
         </div>
       </div>
       <div class="tabs">
-        <a href="#about" class="tab">ABOUT ME</a>
-        <a href="#portfolio" class="tab">PORTFOLIO</a>
-        <a href="#contact" class="tab">CONTACT</a>
+        <a href="#about" class="tab">About Me</a>
+        <a href="#portfolio" class="tab">MyWebPortfolio</a>
+        <a href="#projects" class="tab">Projects</a>
+        <a href="#contact" class="tab">Contact</a>
       </div>
     </div>
   </div>
@@ -29,33 +32,161 @@
     <!-- ABOUT SECTION -->
     <div id="about" class="section">
       <h2>About Me</h2>
-      <p>I'm Wendy, a mother of three, and I’m currently in my third year of college, studying for a Bachelor of Science degree in Information Technology. I have over 7 years of experience as a Registrar Staff member in a college setting. I bring together administrative expertise and technical skills.</p><br>
-      <p>I’m a reliable, consistent, and hard-working individual, seeking an opportunity to prove myself. I am confident that I can excel in the job I am applying for.</p>
+      <p>My name is Wendy, a dedicated mother of three and a third-year Bachelor of Science in Information Technology 
+        student at Cavite State University – Silang Campus, Cavite, Philippines.
+      </p><br>
+      <p>I bring over seven years of experience as a Registrar Staff member in a higher education institution, 
+        where I developed a strong foundation in administrative operations and honed my technical skills. 
+        This background has equipped me with the ability to manage tasks efficiently, communicate effectively, 
+        and adapt to dynamic work environments.
+      </p><br>
+      <p>I am a reliable, consistent, and hard-working individual, seeking an opportunity to contribute meaningfully 
+        to your organization. With my combined experience and academic training, I am confident in my ability to excel 
+        in the position I am applying for.
+      </p>
     </div>
 
     <!-- PORTFOLIO SECTION -->
     <div id="portfolio" class="section">
       <h2>Portfolio</h2>
-      <div class="projects">
+      <div class="portfolio">
 
-        <!-- Project 1 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front project-card">
-              <img src="Calendar.png" alt="Project 1">
-              <h3>Korean Girl Cartoon 2025 Calendar</h3>
+        <!-- Quizzes -->
+    <div class="project-card" data-id="quizzes">
+        <img src="images/quiz.jpg" alt="Project 1">
+        <h3>Pre-Test and Post-Test</h3>
+        <p class="see-more" onclick="openModal('quizzes')">See More</p>
+    </div>
+
+        <!-- Modal -->
+        <div id="modal-quizzes" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('quizzes')">&times;</span>
+                <div class="gallery">
+                    <!-- Pre-Test Images -->
+                    <h3>Pre-Test</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <p>Pre-Test 1</p>
+                            <img src="quizzes/Pretest/pretest1.png" alt="Pretest1" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRETEST1.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 2</p>
+                            <img src="quizzes/Pretest/pretest2.png" alt="Pretest2" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRE-TEST2.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 3</p>
+                            <img src="quizzes/Pretest/pretest3.png" alt="Pretest3" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRETEST3.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 4</p>
+                            <img src="quizzes/Pretest/pretest4.png" alt="Pretest4" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRE-TEST4.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 5</p>
+                            <img src="quizzes/Pretest/pretest5.png" alt="Pretest5" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/Pre-Test 5.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Post-Test Images -->
+                    <h3>Post-Test</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <p>Post-Test 1</p>
+                            <img src="quizzes/Posttest/posttest1.png" alt="Posttest1" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 2</p>
+                            <img src="quizzes/Posttest/posttest2.png" alt="Posttest2" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 3</p>
+                            <img src="quizzes/Posttest/posttest3.png" alt="Posttest3" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 4</p>
+                            <img src="quizzes/Posttest/posttest4.png" alt="Posttest4" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 5</p>
+                            <img src="quizzes/Posttest/posttest5.png" alt="Posttest5" onclick="openFullImage(this.src)">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flip-card-back project-card">
-              <p>Features 12 unique Korean-style cartoon girl illustrations for each month, created using Procreate and InDesign.</p>
+        </div>
+        
+        <!-- Exams -->
+        <div class="project-card" data-id="lab-activity">
+            <img src="images/post-test-icon_orig.png" alt="Project 2">
+            <h3></h3>
+            <p class="see-more" onclick="openModal('lab-activity')">See More</p>
+        </div>
+        
+        <!-- Modal -->
+        <div id="modal-lab-activity" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('lab-activity')">&times;</span>
+            <img src="Calendar.png" alt="Lab Activity Project">
+            <h2>Korean Girl Cartoon 2025 Calendar</h2>
+            <p>This project features 12 unique Korean-style cartoon girl illustrations for each month. Created using Procreate and InDesign.</p>
+            </div>
+        </div>
+        
+        <!-- Lab Acivity -->
+        <div class="project-card" data-id="exams">
+            <img src="Calendar.png" alt="Project 3">
+            <h3>Korean Girl Cartoon 2025 Calendar</h3>
+            <p class="see-more" onclick="openModal('exams')">See More</p>
+        </div>
+        
+        <!-- Modal -->
+        <div id="modal-exams" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('exams')">&times;</span>
+            <img src="Calendar.png" alt="Exams Project">
+            <h2>Korean Girl Cartoon 2025 Calendar</h2>
+            <p>This project features 12 unique Korean-style cartoon girl illustrations for each month. Created using Procreate and InDesign.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- PORTFOLIO SECTION -->
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+
+        <!-- Upword -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front project-card">
+                <img src="images/Calendar.png" alt="Social Media Template Pack">
+                <br>
+                <h3>Canva - 2025 Calendar Cartoon Girl</h3>
+              </div>
+              <div class="flip-card-back project-card">
+                <p>"A vibrant and unique 2025 calendar featuring a series of beautifully designed 
+                    Korean cartoon girls, with a fresh and dynamic theme each month. Every page captures 
+                    a different scene or mood, reflecting diverse styles and emotions through adorable, 
+                    detailed illustrations. From cheerful and playful to calm and elegant, this calendar 
+                    celebrates the charm and versatility of Korean art. Perfect for those who love cute, 
+                    captivating visuals and want to add a touch of creativity to their year."</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 2 -->
+        <!-- Canva -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front project-card">
-              <img src="mockup1.png" alt="Project 2">
+              <img src="mockup1.png" alt="Social Media Template Pack">
               <h3>Social Media Template Pack</h3>
               <p>Eye-catching Canva templates for business pages.</p>
             </div>
@@ -65,11 +196,11 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- SFCC -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front project-card">
-              <img src="mockup2.png" alt="Project 3">
+              <img src="mockup2.png" alt="Logo and Branding Kit">
               <h3>Logo and Branding Kit</h3>
               <p>Minimalist logo set with color palette and icons.</p>
             </div>
@@ -110,8 +241,7 @@
     const profileContainer = document.querySelector('.profile-container');
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.section');
-  
-    // Shrink header & hide profile picture on scroll
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         header.classList.add('scrolled');
@@ -120,8 +250,7 @@
         header.classList.remove('scrolled');
         profileContainer.classList.remove('scrolled');
       }
-  
-      // Highlight active nav tab (with offset to avoid early highlight)
+
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -130,7 +259,7 @@
           current = section.getAttribute('id');
         }
       });
-  
+
       tabs.forEach(tab => {
         tab.classList.remove('active');
         if (tab.getAttribute('href') === `#${current}`) {
@@ -138,9 +267,44 @@
         }
       });
     });
+
+    // Prevent default form submission
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for your message!');
+      form.reset();
+    });
+
+    function openModal(id) {
+    document.getElementById('modal-' + id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+        document.getElementById('modal-' + id).style.display = 'none';
+    }
+
+    // Optional: Close modal on outside click
+    window.onclick = function(event) {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+        });
+    }
+
+    function openFullImage(src) {
+  document.getElementById('lightbox').style.display = 'flex';
+  document.getElementById('lightbox-img').src = src;
+}
+
+function closeFullImage() {
+  document.getElementById('lightbox').style.display = 'none';
+}
   </script>
-  
-  
-  
+<div id="lightbox" class="lightbox" onclick="closeFullImage()">
+    <img id="lightbox-img" src="" alt="Full Image">
+  </div>
 </body>
 </html>
