@@ -7,23 +7,40 @@
   
   html, body {
     scroll-behavior: smooth;
-  }
-  
-  body {
-    background: #ffd000;
+    background: linear-gradient(to bottom, #ffc935, #975b00 );
     color: #333;
+    bottom: auto;
+  }
+
+  #about {
+    scroll-margin-top: 150px; /* adjust based on your sticky header height */
   }
   
+  /* Paragraphs */
+  p {
+    text-align: justify;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  /* Header */
   .header {
     background: #ffffff;
     padding: 30px 50px;
     position: sticky;
-    height: 200px;
     top: 0;
     z-index: 100;
+    height: 200px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    transition: height 0.3s ease;
+  }
+  
+  .header.scrolled {
+    height: 70px;
   }
   
   .header-inner {
@@ -33,30 +50,7 @@
     align-items: flex-end;
   }
   
-  .header.scrolled {
-    height: 70px;
-    transition: height 0.3s ease;
-  }
-  
-  .header,
-  .tabs,
-  .profile-container {
-    transition: all 0.4s ease;
-  }
-  
-  
-  .profile-container.scrolled .profile-img {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    height: 0;
-    overflow: hidden;
-  }
-  
-  .profile-container.scrolled {
-    margin-top: -60px;
-  }
-  
+  /* Profile Section */
   .profile-container {
     position: absolute;
     top: 50px;
@@ -66,6 +60,17 @@
     align-items: center;
     z-index: 10;
     transition: all 0.3s ease;
+  }
+  
+  .profile-container.scrolled {
+    margin-top: -60px;
+  }
+  
+  .profile-container.scrolled .profile-img {
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
   }
   
   .profile-img {
@@ -78,20 +83,32 @@
     transition: opacity 0.3s ease, height 0.3s ease;
   }
   
+
+  /* Style for the anchor link inside name */
+  .name {
+    color: #333; /* Set text color to match the other text */
+    text-decoration: none; /* Remove the default underline */
+    font-weight: bold; /* Optional: Keep it bold */
+    transition: color 0.3s ease; /* Smooth transition for color */
+    font-size: 20px;
+  }
+
+  .name:hover,
+  .name:focus {
+    color: #000000; /* Change the color on hover */
+  }
+  
   .name-role {
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
   }
   
-  .name {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+
   .role {
     font-size: 16px;
   }
   
+  /* Navigation Tabs */
   .tabs {
     position: absolute;
     top: 160px;
@@ -107,11 +124,6 @@
     top: 20px;
   }
   
-  .section {
-    scroll-margin-top: 70px;
-    padding: 40px 30px;
-  }
-  
   .tab {
     text-decoration: none;
     color: #333;
@@ -121,16 +133,7 @@
   }
   
   .tab:hover::after,
-  .tab:focus::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #ffd000;
-  }
-  
+  .tab:focus::after,
   .tab.active::after {
     content: '';
     position: absolute;
@@ -141,16 +144,23 @@
     background-color: #ffd000;
   }
   
+  /* Main Content */
   .main-content {
     padding: 220px 20px 40px;
     max-width: 900px;
     margin: 0 auto;
   }
   
+  .section {
+    scroll-margin-top: 70px;
+    padding: 40px 30px;
+  }
+  
+  /* Tab Content */
   .tab-content {
     display: none;
-    text-align: justify;
     padding: 30px;
+    text-align: justify;
     transition: opacity 0.3s ease;
   }
   
@@ -158,49 +168,110 @@
     display: block;
   }
   
-  .gallery {
+ /* Portfolio Section */
+  .portfolio {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.gallery-item {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Portfolio Card */
+  .portfolio-card {
+    background: #fff;
+    width: 250px;
+    height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures the PDF link is at the bottom */
+    align-items: center; /* Centering content */
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  .portfolio-card img {
+    width: 120px;
+    height: 120px;
+    object-position: center center; /* Keeps the image centered */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 50px;
+  }
+
+  .portfolio-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .portfolio-card p {
+    font-size: 14px;
+    color: #0077cc;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-card p:hover {
+    color: #0056a1;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-15px);
+  }
+
+  /* Gallery */
+  .gallery,
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 8px;
     background-color: #f9f9f9;
-    height: 200px; /* Ensure a fixed height for uniformity */
-}
-
-.gallery-item p {
+    height: 200px;
+  }
+  
+  .gallery-item p {
     font-size: 16px;
-    margin-bottom: 8px;
     font-weight: bold;
-}
-
-.gallery-item img {
+    margin-bottom: 8px;
+  }
+  
+  .gallery-item img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-.view-pdf {
+  }
+  
+  .view-pdf {
     text-decoration: none;
     color: #0052aa;
-    align-self: center; /* Centers the link horizontally */
     font-size: 13px;
-}
+    align-self: center;
+  }
   
   /* Lightbox */
   .lightbox {
@@ -211,7 +282,7 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
   }
@@ -222,13 +293,13 @@
     border-radius: 10px;
   }
   
-  
-  /* Portfolio */
-.portfolio {
+  /* Projects */
+  .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Ensures cards are spaced evenly */
+    justify-content: center;
     gap: 20px;
+    margin-top: 20px;
   }
   
   .flip-card {
@@ -255,50 +326,72 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
-    padding: 15px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .flip-card-front.project-card {
+    padding: 0;
+  }
+  
+  .flip-card-front img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain; /* This ensures the entire image is visible, even when resizing */
+    margin-top: 25px;
+  }
+  
+  .flip-card-front h3 {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flip-card-front p {
+    font-size: 12px;
+    color: #444;
   }
   
   .flip-card-back {
     transform: rotateY(180deg);
     background-color: #fffde7;
+    font-size: 12px;
     overflow-y: auto;
   }
+  
+  .flip-card-back p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .flip-card-back a {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
   
   .see-more,
   .see-less {
     color: #0077cc;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
     display: inline-block;
     margin-top: 10px;
-  }
-  
-  /* Projects */
-  .projects {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between; /* Ensures cards are spaced evenly */
-  }
-  
-  .project-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-bottom: 20px; /* Space between rows */
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    object-fit: contain;
-    border-radius: 10px;
   }
   
   /* Modal */
@@ -310,20 +403,20 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
   }
   
   .modal-content {
     background-color: #fff;
     margin: 5% auto;
     padding: 30px;
-    border-radius: 10px;
     width: 80%;
     max-width: 800px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     position: relative;
     animation: fadeIn 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   
   .modal-content img {
@@ -361,43 +454,116 @@
     }
   }
   
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+    color: white;
+  }
   
-  /* Add to existing CSS file at the bottom */
-  
-  .contact-form {
-    max-width: 500px;
-    margin-top: 20px;
+  /* Contact Info (Left Side) */
+  .contact-left {
+    flex: 1;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: space-between;
+    height: 150px; /* adjust as needed for height spacing */
+  }
+  
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-detail a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .contact-detail a:hover {
+    text-decoration: underline;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Contact Form (Right Side) */
+  .contact-form-container {
+    flex: 1;
+    max-width: 280px;
+    min-width: 280px;
+  }
+  
+  .contact-form-container h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   
   .contact-form label {
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 14px;
   }
   
   .contact-form input,
   .contact-form textarea {
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 14px;
   }
   
   .contact-form button {
-    background-color: #ffd000;
+    align-self: flex-end;
+    background-color: #a18400;
     border: none;
-    padding: 12px;
+    padding: 8px 14px;
     border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
-    font-weight: bold;
     transition: background 0.3s ease;
+    color: white;
   }
   
   .contact-form button:hover {
-    background-color: #e6bc00;
+    background-color: #fdcf00;
+    color: black;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .footer-container {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    margin-top: 100px;
   }
   
-  
+  /* Responsive Design */
   @media (max-width: 768px) {
     .tabs {
       position: static;
@@ -416,44 +582,35 @@
     }
   }
   
-  
   @media (max-width: 480px) {
-    /* For very small devices, further adjustments */
-    
-    /* Make the header content stack vertically */
     .header-inner {
       flex-direction: column;
       align-items: center;
     }
   
-    /* Center tabs and allow wrapping */
     .tabs {
       margin-top: 10px;
       gap: 20px;
       font-size: 14px;
     }
   
-    /* Further reduce profile image dimensions */
     .profile-img {
       width: 150px;
       height: 150px;
     }
   
-    /* Adjust main content padding to prevent overcrowding */
     .main-content {
       padding: 160px 10px 20px;
     }
   
-    /* Tweak font sizes for better readability on small screens */
     .name {
       font-size: 20px;
     }
-    
+  
     .role {
       font-size: 14px;
     }
   
-    /* Make project cards a bit smaller */
     .project-card {
       width: 180px;
       padding: 10px;

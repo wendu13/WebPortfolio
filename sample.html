@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>Wendy Francisco | Virtual Assistant</title>
+  <title>MywebPortfolio</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-yH3F5W1a0EfK5tJ+X6MTtPII5r5UtrD6RgZMEUj6IhPZd1hLkTys5uKdF8cLb3mKJ8CgkEf3V9Iog8cX4b5grg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="sample.css">
 </head>
@@ -15,14 +21,16 @@
       <div class="profile-container">
         <img src="wendu.jpg" alt="Wendy Francisco profile photo" class="profile-img">
         <div class="name-role">
-          <div class="name">WENDY FRANCISCO</div>
-          <div class="role">General Virtual Assistant</div>
+            <div class="name-role">
+                <a href="#top" class="name">Wendy Francisco</a> <!-- Link to the top of the page -->
+                <div class="role">General Virtual Assistant</div>
+              </div>
         </div>
       </div>
       <div class="tabs">
-        <a href="#about" class="tab">About Me</a>
-        <a href="#portfolio" class="tab">MyWebPortfolio</a>
-        <a href="#projects" class="tab">Projects</a>
+        <a href="#about" class="tab">About</a>
+        <a href="#portfolio" class="tab">Portfolio</a>
+        <a href="#projects" class="tab">Career</a>
         <a href="#contact" class="tab">Contact</a>
       </div>
     </div>
@@ -31,40 +39,37 @@
   <div class="main-content">
     <!-- ABOUT SECTION -->
     <div id="about" class="section">
-      <h2>About Me</h2>
-      <p>My name is Wendy, a dedicated mother of three and a third-year Bachelor of Science in Information Technology 
-        student at Cavite State University – Silang Campus, Cavite, Philippines.
-      </p><br>
-      <p>I bring over seven years of experience as a Registrar Staff member in a higher education institution, 
-        where I developed a strong foundation in administrative operations and honed my technical skills. 
-        This background has equipped me with the ability to manage tasks efficiently, communicate effectively, 
-        and adapt to dynamic work environments.
-      </p><br>
-      <p>I am a reliable, consistent, and hard-working individual, seeking an opportunity to contribute meaningfully 
-        to your organization. With my combined experience and academic training, I am confident in my ability to excel 
-        in the position I am applying for.
-      </p>
+      <h2>Introduction</h2><br>
+        <p>Hi, I'm Wendy 30 year old—a dedicated mother of three and a third-year BSIT student at Cavite State University – Silang Campus.
+        I bring over 7 years of experience as a Registrar Staff in a higher education institution, where I built a strong 
+        foundation in administrative work and developed key technical skills. </p><br>
+        <p>I'm also a freelance General Virtual Assistant on Upwork, consistently rated 5 stars for my reliability and efficiency
+        in tasks like email management, data entry, and customer support. I use tools like Canva to create clean, 
+        engaging designs for social media and digital content.</p><br>
+        <p>With a mix of academic training and hands-on experience, I'm passionate about helping organizations stay organized, creative, and productive.</p>
     </div>
 
-    <!-- PORTFOLIO SECTION -->
-    <div id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <div class="portfolio">
+<!-- PORTFOLIO SECTION -->
+<div id="portfolio" class="section">
+    <h2>Academic Portfolio</h2>
+    <div class="portfolio">
 
-        <!-- Quizzes -->
-    <div class="project-card" data-id="quizzes">
-        <img src="images/quiz.jpg" alt="Project 1">
-        <h3>Pre-Test and Post-Test</h3>
-        <p class="see-more" onclick="openModal('quizzes')">See More</p>
-    </div>
+    <!-- Quizzes -->
+    <div class="portfolio-card" data-id="quizzes">
+        <img src="images/quiz.png" alt="Project 1">
+        <div class="portfolio-text">
+          <h3>Completed Quizzes</h3>
+          <p class="see-more" onclick="openModal('quizzes')">View</p>
+        </div>
+      </div>
 
-        <!-- Modal -->
-        <div id="modal-quizzes" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('quizzes')">&times;</span>
-                <div class="gallery">
+    <!-- Modal -->
+    <div id="modal-quizzes" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('quizzes')">&times;</span>
+          <div class="gallery">
                     <!-- Pre-Test Images -->
-                    <h3>Pre-Test</h3>
+                    <h3>Post-Test</h3>
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <p>Pre-Test 1</p>
@@ -94,7 +99,7 @@
                     </div>
 
                     <!-- Post-Test Images -->
-                    <h3>Post-Test</h3>
+                    <h3>Pre-Test</h3>
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <p>Post-Test 1</p>
@@ -121,55 +126,62 @@
             </div>
         </div>
         
-        <!-- Exams -->
-        <div class="project-card" data-id="lab-activity">
-            <img src="images/post-test-icon_orig.png" alt="Project 2">
-            <h3></h3>
-            <p class="see-more" onclick="openModal('lab-activity')">See More</p>
-        </div>
-        
-        <!-- Modal -->
-        <div id="modal-lab-activity" class="modal">
-            <div class="modal-content">
-            <span class="close" onclick="closeModal('lab-activity')">&times;</span>
-            <img src="Calendar.png" alt="Lab Activity Project">
-            <h2>Korean Girl Cartoon 2025 Calendar</h2>
-            <p>This project features 12 unique Korean-style cartoon girl illustrations for each month. Created using Procreate and InDesign.</p>
+        <div class="portfolio-card" data-id="lab-activity">
+            <img src="images/exam.png" alt="Project 2">
+            <div class="portfolio-text">
+              <h3>Examination Results</h3>
+              <p class="see-more" onclick="openModal('lab-activity')">View</p>
             </div>
-        </div>
-        
-        <!-- Lab Acivity -->
-        <div class="project-card" data-id="exams">
-            <img src="Calendar.png" alt="Project 3">
-            <h3>Korean Girl Cartoon 2025 Calendar</h3>
-            <p class="see-more" onclick="openModal('exams')">See More</p>
-        </div>
-        
-        <!-- Modal -->
-        <div id="modal-exams" class="modal">
+          </div>
+      
+          <!-- Modal -->
+          <div id="modal-lab-activity" class="modal">
             <div class="modal-content">
-            <span class="close" onclick="closeModal('exams')">&times;</span>
-            <img src="Calendar.png" alt="Exams Project">
-            <h2>Korean Girl Cartoon 2025 Calendar</h2>
-            <p>This project features 12 unique Korean-style cartoon girl illustrations for each month. Created using Procreate and InDesign.</p>
+              <span class="close" onclick="closeModal('lab-activity')">&times;</span>
+              <img src="images/examresult.jpg" alt="Lab Activity Project">
+              <h2>MIDTERM & FINAL EXAM</h2>
+              <p>Successfully completed both Midterm and Final examinations in Human-Computer Interaction (ITEC101)
+                 under the instruction of Mr. Johneros Puyo, demonstrating solid understanding of user-centered design
+                  principles, usability, and interaction techniques.</p>
             </div>
+          </div>
+      
+          <!-- Lab Activity -->
+          <div class="portfolio-card" data-id="exams">
+            <img src="images/actlab.png" alt="Project 3">
+            <div class="portfolio-text">
+              <h3>Laboratory Activities</h3>
+              <p class="see-more" onclick="openModal('exams')">View</p>
+            </div>
+          </div>
+      
+          <!-- Modal -->
+          <div id="modal-exams" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('exams')">&times;</span>
+              <img src="images/enchanted.png" alt="Exams Project">
+              <h2>Enchanted Beauty</h2>
+              <p>Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
+                self-care, and confidence. We believe that beauty is more than just makeup it’s a feeling,
+                 an experience, and a way to express yourself. Our mission is to make beauty accessible, 
+                 effortless, and fun for everyone.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     
 
-    <!-- PORTFOLIO SECTION -->
+    <!-- PROJECT SECTION -->
     <div id="projects" class="section">
-        <h2>Projects</h2>
+        <h2>Career Highlights</h2>
         <div class="projects">
 
-        <!-- Upword -->
+        <!-- Canva -->
         <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front project-card">
-                <img src="images/Calendar.png" alt="Social Media Template Pack">
-                <br>
-                <h3>Canva - 2025 Calendar Cartoon Girl</h3>
+                <img src="images/canva.webp" alt="Social Media Template Pack">
+                <h3>CANVA</h3>
               </div>
               <div class="flip-card-back project-card">
                 <p>"A vibrant and unique 2025 calendar featuring a series of beautifully designed 
@@ -177,21 +189,28 @@
                     a different scene or mood, reflecting diverse styles and emotions through adorable, 
                     detailed illustrations. From cheerful and playful to calm and elegant, this calendar 
                     celebrates the charm and versatility of Korean art. Perfect for those who love cute, 
-                    captivating visuals and want to add a touch of creativity to their year."</p>
+                    captivating visuals and want to add a touch of creativity to their year."
+                    <br><a href="https://www.canva.com/design/DAGQ5GVO0_0/TTD85lT7r8hixqFTxILo4g/edit" target="_blank">View Project</a>
+                </p>
               </div>
             </div>
           </div>
 
-        <!-- Canva -->
+        <!-- Upwork -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front project-card">
-              <img src="mockup1.png" alt="Social Media Template Pack">
-              <h3>Social Media Template Pack</h3>
-              <p>Eye-catching Canva templates for business pages.</p>
+              <img src="images/upwork-roundedsquare-1.svg" alt="Social Media Template Pack">
+              <h3>UPWORK</h3>
             </div>
             <div class="flip-card-back project-card">
-              <p>Customizable Canva templates for promoting small businesses. Includes Instagram, Facebook, and Pinterest post designs.</p>
+                <p>With a proven track record on Upwork, I provide top-notch virtual assistance to clients across a variety of industries. 
+                As a 5-star rated freelancer, I have successfully completed a wide range of tasks including email management, scheduling, 
+                data entry, customer support, and social media management. </p>
+                <p>On my portfolio, you’ll find examples of successful projects that highlight my dedication to delivering quality 
+                    results and maintaining strong communication with clients. I take pride in being detail-oriented, organized, and 
+                    efficient, ensuring that all your administrative needs are handled seamlessly.
+                <br><a href="https://www.upwork.com/freelancers/wendymf013?promobnr=1" target="_blank">View Profile</a></p>
             </div>
           </div>
         </div>
@@ -200,43 +219,79 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front project-card">
-              <img src="mockup2.png" alt="Logo and Branding Kit">
-              <h3>Logo and Branding Kit</h3>
-              <p>Minimalist logo set with color palette and icons.</p>
+              <img src="images/SOUTH.png" alt="Logo and Branding Kit">
+              <h3>SFCC</h3>
             </div>
             <div class="flip-card-back project-card">
-              <p>Designed branding kit with logo variations, font pairing, and color codes to establish consistent identity for startups.</p>
+                <p>With over seven years of experience in South Forbes City College, I have honed my skills in managing academic records,
+                 ensuring compliance with CHED, DEPED, and TESDA regulations, and providing efficient administrative support. 
+                 My expertise includes handling student registrations, maintaining accurate records, processing academic documents, 
+                 and ensuring all requirements are met for accreditation and program compliance. </p>
+
+                <p>Throughout my career, I’ve developed a deep understanding of the regulatory landscape and have consistently 
+                    contributed to the smooth operation of educational institutions. My attention to detail, organizational skills, 
+                    and ability to manage multiple tasks have been key to my success in this role.
+                    <br><a href="about/WENDY M FRANCISCO CV.pdf" target="_blank" class="view-pdf">Curriculum Vitae</a>
+                </p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- CONTACT SECTION -->
-    <div id="contact" class="section">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> wendytm013@gmail.com</p>
-      <p><strong>Phone:</strong> +63935 487 9190</p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/wendyfrancisco" target="_blank">linkedin.com/in/wendyfrancisco</a></p>
+<!-- CONTACT SECTION -->
+<div id="contact" class="section">
+    <h2 style="color: white;">Get in Touch</h2>
+    <div class="contact-container">
+      <!-- Contact Info -->
+    <div class="contact-left">
+        <div class="contact-detail">
+            <img src="images/gmail.png" alt="Email Icon" class="icon">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wendytm013@gmail.com&su=Subject%20Here&body=Write%20your%20message%20here." 
+            target="_blank">wendytm013@gmail.com</a>
+        </div>
+        <div class="contact-detail">
+            <img src="images/viber.png" alt="Viber Icon" class="icon">
+            <a href="viber://chat?number=%2B639354879190">+63935 487 9190</a>
+        </div>
+        <div class="contact-detail">
+            <img src="images/linkedin.png" alt="LinkedIn Icon" class="icon">
+            <a href="https://www.linkedin.com/in/wendy-francisco-990147274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
+            target="_blank">linkedin.com/in/wendy-francisco</a>
+        </div>
+    </div>
 
-      <br><br>
-      <p><strong>Send Me a Message</strong></p>
-      <form class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h3>Send Me a Message</h3>
+        <form class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+  
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 
+<!-- FOOTER -->
+<footer class="footer-container">
+        <p>&copy; ITEC 101 MywebPortfolio | Wendy Francisco | 202106917 | BSIT3A &reg</p>
+</footer>
+
   <script>
+
+    document.querySelector('.name').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+    });
+
     const header = document.querySelector('.header');
     const profileContainer = document.querySelector('.profile-container');
     const tabs = document.querySelectorAll('.tab');
