@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wendy Francisco | Virtual Assistant</title>
+  <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-inner">
+      <div class="profile-container">
+        <img src="wendu.jpg" alt="Profile" class="profile-img">
+        <div class="name-role">
+          <div class="name">WENDY FRANCISCO</div>
+          <div class="role">General Virtual Assistant</div>
+        </div>
+      </div>
+      <div class="tabs">
+        <a href="#about" class="tab">ABOUT ME</a>
+        <a href="#portfolio" class="tab">PORTFOLIO</a>
+        <a href="#contact" class="tab">CONTACT</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <!-- ABOUT SECTION -->
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <p>I'm Wendy, a mother of three, and I’m currently in my third year of college, studying for a Bachelor of Science degree in Information Technology. I have over 7 years of experience as a Registrar Staff member in a college setting. I bring together administrative expertise and technical skills.</p><br>
+      <p>I’m a reliable, consistent, and hard-working individual, seeking an opportunity to prove myself. I am confident that I can excel in the job I am applying for.</p>
+    </div>
+
+    <!-- PORTFOLIO SECTION -->
+    <div id="portfolio" class="section">
+      <h2>Portfolio</h2>
+      <div class="projects">
+
+        <!-- Project 1 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front project-card">
+              <img src="Calendar.png" alt="Project 1">
+              <h3>Korean Girl Cartoon 2025 Calendar</h3>
+            </div>
+            <div class="flip-card-back project-card">
+              <p>Features 12 unique Korean-style cartoon girl illustrations for each month, created using Procreate and InDesign.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front project-card">
+              <img src="mockup1.png" alt="Project 2">
+              <h3>Social Media Template Pack</h3>
+              <p>Eye-catching Canva templates for business pages.</p>
+            </div>
+            <div class="flip-card-back project-card">
+              <p>Customizable Canva templates for promoting small businesses. Includes Instagram, Facebook, and Pinterest post designs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front project-card">
+              <img src="mockup2.png" alt="Project 3">
+              <h3>Logo and Branding Kit</h3>
+              <p>Minimalist logo set with color palette and icons.</p>
+            </div>
+            <div class="flip-card-back project-card">
+              <p>Designed branding kit with logo variations, font pairing, and color codes to establish consistent identity for startups.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div id="contact" class="section">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> wendytm013@gmail.com</p>
+      <p><strong>Phone:</strong> +63935 487 9190</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/wendyfrancisco" target="_blank">linkedin.com/in/wendyfrancisco</a></p>
+
+      <br><br>
+      <p><strong>Send Me a Message</strong></p>
+      <form class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const header = document.querySelector('.header');
+    const profileContainer = document.querySelector('.profile-container');
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.section');
+  
+    // Shrink header & hide profile picture on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+        profileContainer.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+        profileContainer.classList.remove('scrolled');
+      }
+  
+      // Highlight active nav tab (with offset to avoid early highlight)
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - 200 && window.scrollY < sectionTop + sectionHeight - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+  
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('href') === `#${current}`) {
+          tab.classList.add('active');
+        }
+      });
+    });
+  </script>
+  
+  
+  
+</body>
+</html>

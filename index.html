@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wendy Francisco - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+  <!-- LEFT PROFILE SIDE -->
+  <div class="profile" id="profile">
+    <img src="wendu.jpg" alt="Wendy">
+    <div>
+      <h1>Wendy Francisco</h1>
+      <p>General Virtual Assistant</p>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE CONTENT -->
+  <div class="right-content" id="rightContent">
+    <div class="nav">
+      <a href="#about">About Me</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m Wendy, a mother of three, and I’m currently in my third year of college, 
+        studying for a Bachelor of Science degree in Information Technology. 
+        I have over 7 years of experience as a Registrar Staff member in a college setting.
+        I bring together administrative expertise and technical skills. My experience in educational 
+        administration has honed my abilities in data management, report creation, and student services.
+        My ongoing IT education keeps me updated with the latest technologies and best practices.
+      </p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="projects">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front project-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Project 1">
+              <h3>Korean Girl Cartoon 2025 Calendar Design</h3>
+              <p>
+                A playful 2025 calendar featuring hand-drawn Korean girl cartoons... 
+                <span class="see-more">See more</span>
+              </p>
+            </div>
+            <div class="flip-card-back project-card">
+              <p>
+                Full project description here. You can include everything from your original long paragraph.
+              </p>
+              <span class="see-less">See less</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Project 2">
+          <h3>Project 02</h3>
+          <p>Monochrome landscapes shot across the country.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Project 3">
+          <h3>Project 03</h3>
+          <p>Conceptual portraits inspired by urban solitude.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <div class="contact-row">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wendytm013@gmail.com" target="_blank">wendytm013@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Upwork">
+          <a href="https://www.upwork.com/freelancers/~01024feee67ee4a9c4?mp_source=share" target="_blank">Upwork Profile</a>
+        </div>
+        <div class="contact-row">
+          <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone">
+          <span>0915 427 9190</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const profile = document.getElementById("profile");
+    const aboutSection = document.getElementById("about");
+    const rightContent = document.getElementById("rightContent");
+
+    const scrollPosition = window.pageYOffset;
+    const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
+
+    if (scrollPosition > aboutBottom - 100) {
+      profile.classList.add("animate-away");
+      rightContent.classList.add("expand");
+    } else {
+      profile.classList.remove("animate-away");
+      rightContent.classList.remove("expand");
+    }
+  });
+
+  document.querySelectorAll('.see-more').forEach(link => {
+    link.addEventListener('click', function () {
+      const card = link.closest('.flip-card');
+      card.classList.add('flipped', 'expanded');
+    });
+  });
+
+    // Flip back on "See Less"
+    document.querySelectorAll('.see-less').forEach(link => {
+    link.addEventListener('click', function () {
+      const card = link.closest('.flip-card');
+      card.classList.remove('flipped', 'expanded');
+    });
+  });
+
+</script>
+
+</body>
+</html>
+
+

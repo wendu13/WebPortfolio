@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffd000;
+  color: #333;
+}
+
+.header {
+  background: #ffffff;
+  padding: 30px 50px;
+  position: sticky;
+  height: 200px;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header.scrolled {
+  height: 70px;
+  transition: height 0.3s ease;
+}
+
+.header,
+.tabs,
+.profile-container {
+  transition: all 0.4s ease;
+}
+
+
+.profile-container.scrolled .profile-img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.profile-container.scrolled {
+  margin-top: -60px;
+}
+
+.profile-container {
+  position: absolute;
+  top: 50px;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.name-role {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 16px;
+}
+
+.tabs {
+  position: absolute;
+  top: 160px;
+  right: 250px;
+  display: flex;
+  gap: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: top 0.3s ease;
+}
+
+.header.scrolled .tabs {
+  top: 20px;
+}
+
+.section {
+  scroll-margin-top: 180px;
+  padding: 40px 30px;
+  scroll-margin-top: 180px;
+}
+
+.tab {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover::after,
+.tab:focus::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffd000;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffd000;
+}
+
+.main-content {
+  padding: 220px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tab-content {
+  display: none;
+  text-align: justify;
+  padding: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.flip-card {
+  perspective: 1000px;
+  width: 250px;
+  height: 300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.see-more,
+.see-less {
+  color: #0077cc;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Add to existing CSS file at the bottom */
+
+.contact-form {
+  max-width: 500px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #ffd000;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e6bc00;
+}
+
+
+@media (max-width: 768px) {
+  .tabs {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .header {
+    height: auto;
+    padding-bottom: 120px;
+  }
+
+  .profile-container {
+    top: 120px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* For very small devices, further adjustments */
+  
+  /* Make the header content stack vertically */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Center tabs and allow wrapping */
+  .tabs {
+    margin-top: 10px;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  /* Further reduce profile image dimensions */
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Adjust main content padding to prevent overcrowding */
+  .main-content {
+    padding: 160px 10px 20px;
+  }
+
+  /* Tweak font sizes for better readability on small screens */
+  .name {
+    font-size: 20px;
+  }
+  
+  .role {
+    font-size: 14px;
+  }
+
+  /* Make project cards a bit smaller */
+  .project-card {
+    width: 180px;
+    padding: 10px;
+    align-items: center;
+  }
+}
