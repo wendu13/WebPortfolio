@@ -42,7 +42,7 @@
   
   .header.scrolled {
       background: 
-        url('images/cat3.gif') no-repeat center center / 250px 190px,
+        url('images/cat3.gif') no-repeat center center / 253px 190px,
         linear-gradient(to left, #ffffff, #FDE6E0, #EBA99D);
       background-position: right;
       height: 70px;
@@ -228,7 +228,7 @@
   }
   
   .portfolio-card p:hover {
-    color: #0056a1;
+    color: #690099;
   }
   
   .portfolio-card:hover {
@@ -579,173 +579,272 @@
 
 
 
-
-  
-
-
-  @media only screen and (max-width: 600px) {
-    /* Adjusting the header */
-    .header {
-      height: auto;
-      flex-direction: column;
-      justify-content: center;
+  @media screen and (max-width: 350px) {
+    /* Body */
+    body, html {
       width: 100%;
+      padding: 0;
+      margin: 0;
     }
   
-    .header.scrolled {
-      background: 
-      url('images/cat3.gif') no-repeat center center / 150px 100px,
-      linear-gradient(to left, #ffffff, #FDE6E0, #EBA99D);
-      background-position: right;
-      height: auto;
+    p {
+      font-size: 12px;
     }
 
     h2 {
-      margin-top: 100px; /* Adjust this value as needed */
+      font-size: 18px;
+    }  
+
+    /* Header */
+    .header {
+      height: 200px; /* Tighter header */
+    }
+  
+    .header.scrolled {
+      height: 140px;
+      display: flex;
+      background: 
+      url('images/cat3.gif') no-repeat center center / 80px 50px,
+      linear-gradient(to left, #ffffff, #FDE6E0, #EBA99D);
+      background-position: right;
+    }
+
+    .header.scrolled .tabs {
+      top: 100px;
     }
   
     .profile-container {
-      position: relative;
       top: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center the profile image */
-      margin-bottom: 10px; /* Add space between profile and name */
-    }
-  
-    .profile-container.scrolled {
-      margin-top: -5px;
-    }
-  
-    /* Making the profile image smaller */
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 5px;
-    }
-  
-    .name {
-      font-size: 18px;
-      text-align: center; /* Ensuring the name is centered */
-      text-wrap: nowrap;
-    }
-  
-    .role {
-      font-size: 12px;
-      text-align: center; /* Centering the role */
-      margin-bottom: 40px; /* Space between role and navigation */
-    }
-  
-    /* Making the navigation tabs appear below the name */
-    .tabs {
-      gap: 20px;
-      margin-top: 120px; /* Adjust space between name/role and navigation */
-      transition: top 0.3s ease;  
-      font-size: 16px;
-      position: absolute;
-      left: 155px;
-    }
-  
-    /* Main content padding adjustments */
-    .main-content {
+      left: 10px;
       width: 100%;
     }
   
-    .section {
-      padding: 70px;
+    .profile-img {
+      width: 90px; /* Even smaller profile image */
+      height: 90px;
     }
   
-    /* Portfolio section adjustments */
+    /* Para ma-center at maiwan sa taas */
+    .name-role {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 20;
+    }
+
+    .name {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .role {
+      font-size: 12px;
+      display: block;
+    }
+
+    .tabs {
+      position: absolute;
+      top: 160px; /* adjust depende sa spacing na gusto mo */
+      left: 13px;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      z-index: 9;
+      font-size: 12px;
+    }
+  
+    /* Main Content */
+    .main-content {
+      align-items: center;
+    }
+  
+    /* Portfolio */
     .portfolio {
-      flex-direction: column; /* Stack the cards vertically */
-      align-items: center; /* Center the cards */
-      gap: 20px; /* Add space between cards */
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
-    
+  
     .portfolio-card {
-      width: 100%; /* Make cards take up the full width of the container */
-      max-width: 350px; /* Limit the max width so the cards don't get too large */
-      height: auto; /* Make the height flexible */
-      padding: 20px; /* Add some padding */
-      border-radius: 10px; /* Smooth corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-      text-align: center; /* Center text */
+      width: 200px; /* Smaller portfolio card */
+      height: 250px;
     }
-    
+  
     .portfolio-card img {
-      width: 80px; /* Make the images smaller */
-      height: 80px;
-      margin-bottom: 15px; /* Add space below the image */
+      width: 60px; /* Smaller images */
+      height: 60px;
     }
-    
+
     .portfolio-card h3 {
-      font-size: 16px; /* Adjust font size for mobile */
-      margin-bottom: 10px; /* Add space between title and description */
+      font-size: 12px;
+      font-weight: bold;
+      margin: 5px 0;
     }
     
     .portfolio-card p {
-      font-size: 14px; /* Adjust font size for mobile */
+      font-size: 10px;
       color: #0077cc;
-      margin-bottom: 20px; /* Add space at the bottom */
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      margin-bottom: 30px;
     }
     
-  
-    /* Gallery grid */
-    .gallery-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    .portfolio-card p:hover {
+      color: #690099;
+    }
+
+    .modal .gallery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;     /* Center items inside the gallery item */
+      justify-content: center; /* Ensure vertical alignment */
+      text-align: center;      /* Center the text */
     }
   
-    .gallery-item {
+    .modal .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;     /* Center items inside the gallery item */
+      justify-content: center; /* Ensure vertical alignment */
+      text-align: center;      /* Center the text */
+    }
+  
+    .modal .gallery-item img {
+      width: 100px; /* smaller image for mobile list view */
+      height: auto;
+      margin-bottom: 5px;
+    }
+      
+    .modal .gallery-item p {
+      margin: 0 0 5px;
+      font-size: 13px;
+    }
+  
+    .modal .view-pdf {
+      font-size: 12px;
+      text-decoration: underline;
+      color: #0077cc;
+    }
+
+    /* Lightbox */
+    .lightbox img {
+      max-width: 80%; /* Smaller lightbox images */
+    }
+
+    
+  
+    /* Carousel container setup */
+    .projects {
+      justify-content: center;
+      align-items: center;
+      margin: 0;
       height: auto;
     }
 
-    /*Carousel*/
-    .projects {
-      flex-direction: column;
-      height: auto; /* Remove full screen height for better scroll */
-      padding: 20px;
-      gap: 20px;
-    }
-    
     .carousel-container {
-      width: 100%;
-      padding: 0 10px;
-      overflow-x: auto; /* Allow horizontal scrolling if needed */
+      width: 250px;
+      margin: auto;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      font-size: 12px;
+      color: #fc9494;
+      padding: 5px;
     }
     
+    /* Carousel track flex wrapper */
+    .carousel-track {
+      display: flex;
+      width: 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    /* Individual slide */
     .carousel-slide {
-      min-width: 75%; /* Adjust size for smaller screens */
-      height: auto;
+      min-width: 80%;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Image styling */
+    .carousel-slide img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    /* Text content below image */
+    .text-content {
+      margin-top: 5px;
+    }
+
+    .text-content h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .text-content p {
+      font-size: 12px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .text-content a {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #0077cc;
+      text-decoration: underline;
+    } 
+
+
+    /* Contact Section */
+    .contact-container {
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      gap: 5px;
     }
-    
-    .carousel-slide img {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 15px;
+  
+    .contact-left, .contact-form-container {
+      width: 100%;
+      flex: 1;
+      min-width: 200px;
+      margin-top: 20px;
     }
-    
-    .text-content {
-      padding: 0;
-      text-align: center;
-    }
-      
-    /* Contact form adjustments */
-    .contact-form-container {
-      max-width: 100%;
-      min-width: 100%;
+
+    .contact-form-container h3 {
+      margin-bottom: 5px;
     }
   
     .contact-form input,
     .contact-form textarea {
       width: 100%;
+      padding: 8px;
+      font-size: 8px;
     }
   
-    /* Footer adjustments */
-    .footer-container {
-      padding: 20px;
-      font-size: 12px;
+    .contact-form button {
+      width: 20%;
+      font-size: 8px;
+      padding: 7px 10px;
+    }
+  
+    /* Footer */
+    .footer-container p{
+      font-size: 8px;
+      text-wrap: nowrap;
     }
   }
+  
