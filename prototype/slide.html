@@ -16,7 +16,8 @@
 
     .carousel-container {
       position: relative;
-      width: 800px; /* Wider than slide to show centered */
+      width: 100%; /* Full width */
+      max-width: 600px; /* Max width for mobile view */
       overflow: hidden;
     }
 
@@ -26,38 +27,38 @@
     }
 
     .carousel-slide {
-      min-width: 500px;
-      height: 300px;
+      width: 100%; /* Take up the full width of the container */
+      height: 250px; /* Adjusted height for smaller screens */
       background: rgba(126, 107, 1, 0.3);
       border-radius: 20px;
-      margin: 0 150px; /* Space around to help center */
+      margin: 0; /* Remove margin to avoid unnecessary space */
       display: flex;
       align-items: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     .carousel-slide img {
-      width: 150px;
-      height: 150px;
+      width: 80px; /* Smaller image size */
+      height: 80px;
       object-fit: contain;
       border-radius: 10px;
-      margin-left: 25px;
+      margin-left: 15px;
     }
 
     .text-content {
-      padding-left: 30px;
+      padding-left: 15px;
       color: white;
       font-family: sans-serif;
     }
 
     .text-content h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
+      margin: 0 0 5px;
+      font-size: 16px; /* Adjusted font size */
     }
 
     .text-content p {
       margin: 0;
-      font-size: 14px;
+      font-size: 12px; /* Adjusted font size */
       color: #eee;
     }
 
@@ -79,11 +80,38 @@
     }
 
     .carousel-btn.prev {
-      left: 2px;
+      left: 10px; /* Adjusted position */
     }
 
     .carousel-btn.next {
-      right: 2px;
+      right: 10px; /* Adjusted position */
+    }
+
+    @media (max-width: 600px) {
+      .carousel-container {
+        max-width: 100%;
+      }
+      
+      .carousel-slide {
+        width: 100%; /* Ensure each slide takes full width */
+      }
+
+      .carousel-slide img {
+        width: 80px; /* Smaller images for mobile */
+        height: 80px;
+      }
+
+      .text-content {
+        padding-left: 15px;
+      }
+
+      .text-content h3 {
+        font-size: 16px;
+      }
+
+      .text-content p {
+        font-size: 10px;
+      }
     }
   </style>
 </head>
@@ -143,7 +171,7 @@
   const nextBtn = document.querySelector('.carousel-btn.next');
 
   let index = 1;
-  const slideWidth = slides[0].offsetWidth + 300; // 150px margin * 2 = 300
+  const slideWidth = slides[0].offsetWidth;
 
   track.style.transform = `translateX(-${slideWidth * index}px)`;
 

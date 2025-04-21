@@ -1,0 +1,9 @@
+Reflection Paper: Making My Web Portfolio (HTML, CSS, JS)
+
+Making my web portfolio using HTML, CSS, and JavaScript was really a challenge for me. I’m not really good at front-end development, so this task was not easy. I had to force myself to learn and do it, even though I mostly relied on AI tools instead of hard coding everything.
+
+At first, it was fun and exciting. I enjoyed seeing the small progress I made. But later on, it became frustrating. I had ideas I wanted to add, but I didn’t know how to make them work. I also struggled with background design and choosing colors, especially when no one was giving suggestions. I realized that design is not my strength, and I prefer simple and clean looks. I don’t like websites with too many decorations or effects.
+
+Even though my portfolio looks very simple, I think it still shows a part of who I am. Maybe 30% of my personality can be seen through it. I tried my best to finish it, even if I was not confident in this area. This experience taught me that it's okay to struggle, and it’s okay to use tools that can help.
+
+Thank you, Sir, for giving us this task. I may not be a front-end developer, but I’m proud that I was able to create something.
