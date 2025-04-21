@@ -1,0 +1,414 @@
+/* General Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --max-width: 1200px;
+  }
+body {
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffcbcb;
+    overflow-y: scroll;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header (Reduced height and fixed) */
+nav {
+    background: #FAEDCB;
+    color: #F9629F;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+ nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+/* Nav Link Styling */
+nav ul li a {
+    color: #F9629F;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    background-color: #f9d9c4;
+}
+
+/* Active State (Darker background) */
+nav ul li a.active {
+    background-color: #ebc5ab;
+}
+
+/*bg*/
+  header {
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(222, 141, 162, 0.5),
+        rgba(215, 202, 155, 0.5)
+      ),
+      url("imgs/Eris2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fffdfe;
+  }
+  
+  header .section__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .header__content h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 5rem;
+  }
+  
+  .header__content p {
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .nav__links {
+      display: flex;
+    }
+  
+    .header__content {
+      max-width: 600px;
+    }
+  
+    .header__content p {
+      text-align: left;
+    }
+}
+.makeup__container {
+    background-color: #ac8383;
+
+  }
+  
+  .makeup__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem;
+  }
+  
+  .makeup__card {
+    background-color: #ecbbbb;
+    border-radius: 15px;
+  }
+  
+  .makeup__name {
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+  }
+  
+  .makeup__name i {
+    font-size: 1.2rem;
+  }
+  
+  .makeup__name span {
+    font-style: italic;
+  }
+  .section__container {
+    padding: 5rem 1rem;
+    max-width: var(--max-width);
+    margin: auto;
+  }
+  
+  .section__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .section__subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: white;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 15px;
+  }
+/* Prevent Content Overlap with Header */
+main {
+    padding: 120px 0 20px;
+}
+
+/* Post Styling */
+.post {
+    background: #ffe3e3;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.post h2 {
+    color: #1b021f;
+    margin-top: 0;
+}
+
+.post .meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+.post .read-more {
+    display: inline-block;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.post:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+  
+  footer .section__container {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  footer h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .social__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social__icons i {
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  footer p {
+    font-style: italic;
+  }
+
+/* Back and Send Buttons */
+.back-button,
+.send-button {
+    display: inline-block;
+    background-color: #ff97bf;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover,
+.send-button:hover {
+    background-color: #350535;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Contact Form Styling */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+form {
+    background: #ac8383;
+    padding: 20px;
+    border: 1px solid #d0aaaa;
+    border-radius: 8px;
+    width: 350px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* About Page Styling */
+.about-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FCF7CB;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #FCF7CB;
+}
+
+.team-member p {
+    margin: 0;
+    font-size: 14px;
+    color: #171717;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Align Contact Form & Contact Info */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Icons for Contact Info */
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Success Message Styling */
+.success-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    background: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -3,24 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wendy Francisco | Virtual Assistant</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>MywebPortfolio</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-yH3F5W1a0EfK5tJ+X6MTtPII5r5UtrD6RgZMEUj6IhPZd1hLkTys5uKdF8cLb3mKJ8CgkEf3V9Iog8cX4b5grg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 
   <div class="header">
     <div class="header-inner">
       <div class="profile-container">
-        <img src="wendu.jpg" alt="Profile" class="profile-img">
+        <img src="images/wendu.jpg" alt="Wendy Francisco profile photo" class="profile-img">
         <div class="name-role">
-          <div class="name">WENDY FRANCISCO</div>
-          <div class="role">General Virtual Assistant</div>
+            <div class="name-role">
+                <a href="#top" class="name">WENDY MENDOZA-FRANCISCO</a> <!-- Link to the top of the page -->
+                <div class="role">General Virtual Assistant</div>
+              </div>
         </div>
       </div>
       <div class="tabs">
-        <a href="#about" class="tab">ABOUT ME</a>
-        <a href="#portfolio" class="tab">PORTFOLIO</a>
-        <a href="#contact" class="tab">CONTACT</a>
+        <a href="#about" class="tab">About</a>
+        <a href="#portfolio" class="tab">Portfolio</a>
+        <a href="#projects" class="tab">Career</a>
+        <a href="#contact" class="tab">Contact</a>
       </div>
     </div>
   </div>
@@ -28,100 +40,267 @@
   <div class="main-content">
     <!-- ABOUT SECTION -->
     <div id="about" class="section">
-      <h2>About Me</h2>
-      <p>My name is Wendy, a dedicated mother of three and a third-year Bachelor of Science in Information Technology 
-        student at Cavite State University – Silang Campus, Cavite, Philippines.
-      </p><br>
-      <p>I bring over seven years of experience as a Registrar Staff member in a higher education institution, 
-        where I developed a strong foundation in administrative operations and honed my technical skills. 
-        This background has equipped me with the ability to manage tasks efficiently, communicate effectively, 
-        and adapt to dynamic work environments.
-      </p><br>
-      <p>I am a reliable, consistent, and hard-working individual, seeking an opportunity to contribute meaningfully 
-        to your organization. With my combined experience and academic training, I am confident in my ability to excel 
-        in the position I am applying for.
-      </p>
+      <h2>Introduction</h2><br>
+        <p>Konnichiwa!</p>
+        <br>
+        <p> I'm Wendy—a dedicated mother of three and a third-year BSIT student at Cavite State University – Silang Campus.
+        I bring over 7 years of experience as a Registrar Staff in a higher education institution, where I built a strong 
+        foundation in administrative work and developed key technical skills. </p><br>
+        <p>I'm also a freelance General Virtual Assistant on Upwork, consistently rated 5 stars for my reliability and efficiency
+        in tasks like email management, data entry, and customer support. I use tools like Canva to create clean, 
+        engaging designs for social media and digital content.</p><br>
+        <p>With a mix of academic training and hands-on experience, I'm passionate about helping organizations stay organized, creative, and productive.</p>
     </div>
 
-    <!-- PORTFOLIO SECTION -->
-    <div id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <div class="projects">
+<!-- PORTFOLIO SECTION -->
+<div id="portfolio" class="section">
+    <h2>Academic Portfolio</h2>
+    <div class="portfolio">
 
-        <!-- Project 1 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front project-card">
-              <img src="Calendar.png" alt="Project 1">
-              <h3>Korean Girl Cartoon 2025 Calendar</h3>
+    <!-- Quizzes -->
+    <div class="portfolio-card" data-id="quizzes">
+        <img src="images/quiz.png" alt="portfolio1">
+        <div class="portfolio-text">
+          <h3>Completed Quizzes</h3>
+          <p class="see-more" onclick="openModal('quizzes')">View</p>
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div id="modal-quizzes" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('quizzes')">&times;</span>
+          <div class="gallery">
+                    <!-- Pre-Test Images -->
+                    <h3>Post-Test</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <p>Pre-Test 1</p>
+                            <img src="quizzes/Pretest/pretest1.png" alt="Pretest1" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRETEST1.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 2</p>
+                            <img src="quizzes/Pretest/pretest2.png" alt="Pretest2" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRE-TEST2.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 3</p>
+                            <img src="quizzes/Pretest/pretest3.png" alt="Pretest3" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRETEST3.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 4</p>
+                            <img src="quizzes/Pretest/pretest4.png" alt="Pretest4" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/PRE-TEST4.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                        <div class="gallery-item">
+                            <p>Pre-Test 5</p>
+                            <img src="quizzes/Pretest/pretest5.png" alt="Pretest5" onclick="openFullImage(this.src)">
+                            <a href="quizzes/Pretest/Pre-Test 5.pdf" target="_blank" class="view-pdf">View PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Post-Test Images -->
+                    <h3>Pre-Test</h3>
+                    <br>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <p>Post-Test 1</p>
+                            <img src="quizzes/Posttest/posttest1.png" alt="Posttest1" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 2</p>
+                            <img src="quizzes/Posttest/posttest2.png" alt="Posttest2" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 3</p>
+                            <img src="quizzes/Posttest/posttest3.png" alt="Posttest3" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 4</p>
+                            <img src="quizzes/Posttest/posttest4.png" alt="Posttest4" onclick="openFullImage(this.src)">
+                        </div>
+                        <div class="gallery-item">
+                            <p>Post-Test 5</p>
+                            <img src="quizzes/Posttest/posttest5.png" alt="Posttest5" onclick="openFullImage(this.src)">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flip-card-back project-card">
-              <p>Features 12 unique Korean-style cartoon girl illustrations for each month, created using Procreate and InDesign.</p>
+        </div>
+        
+        <div class="portfolio-card" data-id="lab-activity">
+            <img src="images/exam1.png" alt="portfolio2">
+            <div class="portfolio-text">
+              <h3>Examination Results</h3>
+              <p class="see-more" onclick="openModal('lab-activity')">View</p>
             </div>
           </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front project-card">
-              <img src="mockup1.png" alt="Project 2">
-              <h3>Social Media Template Pack</h3>
-              <p>Eye-catching Canva templates for business pages.</p>
-            </div>
-            <div class="flip-card-back project-card">
-              <p>Customizable Canva templates for promoting small businesses. Includes Instagram, Facebook, and Pinterest post designs.</p>
+      
+          <!-- Modal -->
+          <div id="modal-lab-activity" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('lab-activity')">&times;</span>
+              <img src="images/examresult.jpg" alt="Lab Activity Project">
+              <h2>MIDTERM & FINAL EXAM</h2>
+              <p>Successfully completed both Midterm and Final examinations in Human-Computer Interaction (ITEC101)
+                 under the instruction of Mr. Johneros Puyo, demonstrating solid understanding of user-centered design
+                  principles, usability, and interaction techniques.</p>
             </div>
           </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front project-card">
-              <img src="mockup2.png" alt="Project 3">
-              <h3>Logo and Branding Kit</h3>
-              <p>Minimalist logo set with color palette and icons.</p>
+      
+          <!-- Lab Activity -->
+          <div class="portfolio-card" data-id="exams">
+            <img src="images/actlab.png" alt="portfolio3">
+            <div class="portfolio-text">
+              <h3>Laboratory Activities</h3>
+              <p class="see-more" onclick="openModal('exams')">View</p>
             </div>
-            <div class="flip-card-back project-card">
-              <p>Designed branding kit with logo variations, font pairing, and color codes to establish consistent identity for startups.</p>
+          </div>
+      
+          <!-- Modal -->
+          <div id="modal-exams" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('exams')">&times;</span>
+              <img src="images/enchanted.png" alt="Exams Project">
+              <h2>Enchanted Beauty</h2>
+              <p>Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
+                self-care, and confidence. We believe that beauty is more than just makeup it’s a feeling,
+                 an experience, and a way to express yourself. Our mission is to make beauty accessible, 
+                 effortless, and fun for everyone.</p>
             </div>
           </div>
         </div>
       </div>
+
+    <!-- PROJECT SECTION -->
+      <div id="projects" class="section">
+        <h2>Career Highlights</h2>
+        <br>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+          <!-- Cloned last -->
+          <div class="carousel-slide">
+            <img src="images/sfcc.png" alt="Project 3">
+            <div class="text-content">
+              <h3>SFCC</h3>
+              <p>With 7 years at South Forbes City College, I specialize in academic record management, 
+                compliance with CHED, DEPED, and TESDA. <br>
+                <a href="about/WENDY M FRANCISCO CV.pdf" target="_blank">Curriculum Vitae</a>
+              </p>
+            </div>
+          </div>
+      
+          <!-- Real slides -->
+          <div class="carousel-slide">
+            <img src="images/canva.webp" alt="Project 1">
+            <div class="text-content">
+              <h3>CANVA</h3>
+              <p>Bright and unique 2025 calendar showcasing charming Korean cartoon girls, each month with a fresh, 
+                dynamic theme. <br>
+                <a href="https://www.canva.com/design/DAGQ5GVO0_0/TTD85lT7r8hixqFTxILo4g/edit" 
+                target="_blank">View Project</a>
+              </p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/upwork.svg" alt="Project 2">
+            <div class="text-content">
+              <h3>UPWORK</h3>
+              <p>With a 5-star ⭐⭐⭐⭐⭐ Upwork rating, I offer expert virtual assistance in email 
+                management, data entry, customer support, and more. <br>
+                <a href="https://www.upwork.com/freelancers/wendymf013?promobnr=1" target="_blank">View Profile</a>
+              </p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/sfcc.png" alt="Project 3">
+            <div class="text-content">
+              <h3>SFCC</h3>
+                <p>With 7 years as Registrar Staff at South Forbes City College, I specialize in academic 
+                  record management, compliance with CHED, DEPED, and TESDA. <br>
+                  <a href="about/WENDY M FRANCISCO CV.pdf" target="_blank">Curriculum Vitae</a>
+                </p>
+            </div>
+          </div>
+      
+          <!-- Cloned first -->
+          <div class="carousel-slide">
+            <img src="images/canva.webp" alt="Project 1">
+            <div class="text-content">
+              <h3>CANVA</h3>
+              <p>Bright and unique 2025 calendar showcasing charming Korean cartoon girls, each month with a fresh, dynamic theme. <br>
+                <a href="https://www.canva.com/design/DAGQ5GVO0_0/TTD85lT7r8hixqFTxILo4g/edit" target="_blank">View Project</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+      </div>
+
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="section">
+    <h2 style="color: white;">Get in Touch</h2>
+    <div class="contact-container">
+      <!-- Contact Info -->
+    <div class="contact-left">
+        <div class="contact-detail">
+            <img src="images/gmail.png" alt="Email Icon" class="icon">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=wendy.mendoza@cvsu.edu.ph&su=Subject%20Here&body=Write%20your%20message%20here." 
+            target="_blank">wendy.mendoza@cvsu.edu.ph</a>
+        </div>
+        <div class="contact-detail">
+            <img src="images/viber.png" alt="Viber Icon" class="icon">
+            <a href="viber://chat?number=%2B639354879190">(0935) 487 9190</a>
+        </div>
+        <div class="contact-detail">
+            <img src="images/linkedin.png" alt="LinkedIn Icon" class="icon">
+            <a href="https://www.linkedin.com/in/wendy-francisco-990147274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
+            target="_blank">linkedin.com/in/wendy-francisco</a>
+        </div>
     </div>
 
-    <!-- CONTACT SECTION -->
-    <div id="contact" class="section">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> wendytm013@gmail.com</p>
-      <p><strong>Phone:</strong> +63935 487 9190</p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/wendyfrancisco" target="_blank">linkedin.com/in/wendyfrancisco</a></p>
-
-      <br><br>
-      <p><strong>Send Me a Message</strong></p>
-      <form class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h3>Send Me a Message</h3>
+        <form class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+  
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-container">
+        <p>&copy; ITEC 101 MywebPortfolio | Wendy Francisco | 202106917 | BSIT3A &reg</p>
+</footer>
 
   <script>
+
+    document.querySelector('.name').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+    });
+
     const header = document.querySelector('.header');
     const profileContainer = document.querySelector('.profile-container');
     const tabs = document.querySelectorAll('.tab');
     const sections = document.querySelectorAll('.section');
-  
-    // Shrink header & hide profile picture on scroll
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
         header.classList.add('scrolled');
@@ -130,8 +309,7 @@
         header.classList.remove('scrolled');
         profileContainer.classList.remove('scrolled');
       }
-  
-      // Highlight active nav tab (with offset to avoid early highlight)
+
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -140,7 +318,7 @@
           current = section.getAttribute('id');
         }
       });
-  
+
       tabs.forEach(tab => {
         tab.classList.remove('active');
         if (tab.getAttribute('href') === `#${current}`) {
@@ -148,9 +326,87 @@
         }
       });
     });
+
+    // Prevent default form submission
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for your message!');
+      form.reset();
+    });
+
+    function openModal(id) {
+      document.getElementById('modal-' + id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById('modal-' + id).style.display = 'none';
+    }
+
+    // Optional: Close modal on outside click
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+
+    function openFullImage(src) {
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+
+    function closeFullImage() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // Carousel functionality
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+
+    let index = 1;
+    const slideWidth = slides[0].offsetWidth + 100; // 150px margin * 2 = 300
+
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+
+    function moveToIndex(newIndex) {
+      index = newIndex;
+      track.style.transition = 'transform 0.4s ease-in-out';
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (index >= slides.length - 1) return;
+      moveToIndex(index + 1);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (index <= 0) return;
+      moveToIndex(index - 1);
+    });
+
+    track.addEventListener('transitionend', () => {
+      if (index === slides.length - 1) {
+        track.style.transition = 'none';
+        index = 1;
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
+      }
+      if (index === 0) {
+        track.style.transition = 'none';
+        index = slides.length - 2;
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
+      }
+    });
+
   </script>
-  
-  
-  
+
+
+<div id="lightbox" class="lightbox" onclick="closeFullImage()">
+    <img id="lightbox-img" src="" alt="Full Image">
+  </div>
 </body>
 </html>

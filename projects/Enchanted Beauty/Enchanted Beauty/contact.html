@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LATINA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Show success message
+            document.getElementById("success-message").style.display = "block";
+
+            // Redirect to home page after 3 seconds
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 3000);
+        }
+    </script>
+    <style>
+        header {
+            height: 100vh;
+            background-image: linear-gradient(
+                rgba(222, 141, 162, 0.5),
+                rgba(215, 202, 155, 0.5)
+            ),
+            url("imgs/Leila2.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fffdfe;
+        }
+        .container-contact {
+            size-adjust: auto;
+            margin: 5%;
+  }
+  footer{
+    margin-top: 5%;
+  }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Enchanted Beauty ⋆˚࿔</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+        </div>
+    </nav>
+
+    
+    <header>
+        <div class="section__container">
+            <div class="header__content">
+            <h1>Contact us</h1>
+            <div class="contact-container">
+                <form action="#" method="POST" id="contact-form">
+                    <h2>Send us a message!</h2>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="send-button">Send</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </header>
+    
+        <!-- Success Message -->
+        <div id="success-message" class="success-message">
+            <p><strong>Message Sent Successfully!</strong></p>
+        </div>
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <img src="email.jpg" alt="Email Icon" class="icon">
+                    <a href="mailto:info@latinamakeup.com">info@latinamakeup.com</a>
+                </div>
+                <br>
+                <div class="info-item">
+                    <img src="phone.jpg" alt="Phone Icon" class="icon">
+                    <span>0912-561-9812</span>
+                </div>
+                <br>
+                <div class="info-item">
+                    <img src="address.png" alt="Location Icon" class="icon">
+                    <span>2 Quirino Hwy, Novaliches, Quezon City, Metro Manila</span>
+                </div>
+            </div>
+            <p style="padding: 50px; align-items: center; text-align: center;">&copy; 2025 My Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
