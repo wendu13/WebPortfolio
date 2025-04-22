@@ -572,7 +572,12 @@
 
 
 
-/* Mobile Styles */
+  
+
+
+
+
+ /* Mobile Styles */
 @media (max-width: 450px) {
 
   h2 {
@@ -589,7 +594,7 @@
       height: 100px; /* Shrink header height */
       background: 
         url('images/cat3.gif') no-repeat center center / 120px 90px,
-        linear-gradient(to left, #ffffff, #FDE6E0, #EBA99D);
+        linear-gradient(to left, #ffffff, #ffffff, #EBA99D);
       background-position: right;
     }
   
@@ -762,7 +767,7 @@
     }
 
     .text-content p{
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .carousel-btn {
@@ -782,8 +787,8 @@
     }
 
       /* Footer */
-  .footer-container p{
-    font-size: 8px;
-    text-wrap: nowrap;
-  }
+    .footer-container p{
+      font-size: 8px;
+      text-wrap: nowrap;
+    }
 }
