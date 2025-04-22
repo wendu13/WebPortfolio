@@ -580,20 +580,19 @@
  /* Mobile Styles */
 @media (max-width: 450px) {
 
-  h2 {
-    font-size: 18px;
-  }
-  
-  p {
-    font-size: 15px;
-  }
-
+    h2 {
+      font-size: 16px;
+    }
+    
+    p {
+      font-size: 13px;
+    }
 
     /* Header becomes thinner on scroll */
     .header.scrolled {
       height: 100px; /* Shrink header height */
       background: 
-        url('images/cat3.gif') no-repeat center center / 120px 90px,
+        url('images/cat3.gif') no-repeat center bottom / 110px 70px,
         linear-gradient(to left, #ffffff, #ffffff, #EBA99D);
       background-position: right;
     }
@@ -611,6 +610,7 @@
       width: 130px;  /* Set the image size smaller */
       height: 130px; /* Adjust to maintain aspect ratio */
       border-radius: 50%;
+      position: relative;
     }
 
     /* Hide profile image when scrolled on mobile */
@@ -666,25 +666,24 @@
     /* Reposition tabs for smaller screens */
     .tabs {
       top: 230px;
-      right: 80px;
+      right: 60px;
       gap: 20px;
-      font-size: 15px;
+      font-size: 14px;
     }
 
       /* Adjust portfolio cards for mobile */
     .portfolio {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;  /* Decrease gap between items */
+      gap: 20px;  /* Decrease gap between items */
       justify-content: center;
       margin-top: 20px;
     }
     
     /* Portfolio Card */
     .portfolio-card {
-      width: 150px; /* Smaller card width */
-      height: 180px; /* Adjust height as necessary */
-      flex-direction: column;
+      width: 180px; /* Smaller card width */
+      height: 200px; /* Adjust height as necessary */
       align-items: center;
       justify-content: space-between;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -692,17 +691,17 @@
       position: relative;
       border-radius: 15px;
       transition: transform 0.3s ease;
+      flex-wrap: wrap;
     }
 
     .portfolio-card img {
-      width: 80px;  /* Smaller image size */
-      height: 80px; /* Adjust to maintain aspect ratio */
-      border-radius: 10px;
-      margin-top: 15px;
+      width: 60px;  /* Smaller image size */
+      height: 60px; /* Adjust to maintain aspect ratio */
+      margin-top: 40px;
     }
 
     .portfolio-card h3 {
-      font-size: 14px; /* Smaller text for mobile */
+      font-size: 12px; /* Smaller text for mobile */
       margin-top: 10px;
     }
 
@@ -721,13 +720,14 @@
     }
 
     .gallery-item {
-      width: 100%;  /* Full width for each item */
+      width: 70%;  /* Full width for each item */
       height: auto;  /* Let items adjust height based on content */
       margin-bottom: 15px; /* Space between items */
+      position: relative;
     }
 
     .gallery-item img {
-      width: 100%;  /* Full width image */
+      width: 70%;  /* Full width image */
       height: auto;
     }
 
@@ -736,7 +736,7 @@
     }
 
     .view-pdf {
-      font-size: 12px;  /* Adjust font size for smaller screens */
+      font-size: 10px;  /* Adjust font size for smaller screens */
     }
 
     /* Carousel */
