@@ -1,4 +1,4 @@
 cd desktop\mywebportfolio
 git add .
-git commit -m "Update latest changes"
+git commit -m "Update folder with latest changes"
 git push

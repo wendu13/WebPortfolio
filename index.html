@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>MywebPortfolio</title>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-yH3F5W1a0EfK5tJ+X6MTtPII5r5UtrD6RgZMEUj6IhPZd1hLkTys5uKdF8cLb3mKJ8CgkEf3V9Iog8cX4b5grg=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -269,13 +266,13 @@
         <h3>Send Me a Message</h3>
         <form class="contact-form">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" autocomplete="name"/>
   
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" autocomplete="email"/>
   
           <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea id="message" name="message" rows="4" autocomplete="off"></textarea>
   
           <button type="submit">Send</button>
         </form>
