@@ -69,7 +69,7 @@
           <span class="close" onclick="closeModal('quizzes')">&times;</span>
           <div class="gallery">
                     <!-- Pre-Test Images -->
-                    <h3>Post-Test</h3>
+                    <h3>Pre-Test</h3>
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <p>Pre-Test 1</p>
@@ -99,29 +99,50 @@
                     </div>
 
                     <!-- Post-Test Images -->
-                    <h3>Pre-Test</h3>
+                    <h3>Post-Test</h3>
                     <br>
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <p>Post-Test 1</p>
-                            <img src="images/shopping.webp" alt="Posttest1" onclick="openFullImage(this.src)">
+                            <img src="images/yellow.webp" alt="Posttest1" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 2</p>
-                            <img src="images/shopping.webp" alt="Posttest2" onclick="openFullImage(this.src)">
+                            <img src="images/yellow.webp" alt="Posttest2" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 3</p>
-                            <img src="images/shopping.webp" alt="Posttest3" onclick="openFullImage(this.src)">
+                            <img src="images/yellow.webp" alt="Posttest3" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 4</p>
-                            <img src="images/shopping.webp" alt="Posttest4" onclick="openFullImage(this.src)">
+                            <img src="quizzes/Post test/quiz4.jpg" alt="Posttest4" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 5</p>
-                            <img src="images/shopping.webp" alt="Posttest5" onclick="openFullImage(this.src)">
+                            <img src="quizzes/Post test/quiz5.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
                         </div>
+                    </div>
+
+                    <h3>Long Quiz</h3>
+                    <br>
+                    <div class="gallery-grid">
+                      <div class="gallery-item">
+                        <p>Midterm_1</p>
+                        <img src="quizzes/midtermLQ.jpg" alt="midtermlq" onclick="openFullImage(this.src)">
+                    </div>
+                    <div class="gallery-item">
+                      <p>Midterm_2</p>
+                      <img src="quizzes/midtermLQ2.jpg" alt="midtermlq" onclick="openFullImage(this.src)">
+                  </div>
+                    <div class="gallery-item">
+                        <p>Final_1</p>
+                        <img src="images/yellow.webp" alt="finallq" onclick="openFullImage(this.src)">
+                    </div>
+                    <div class="gallery-item">
+                      <p>Final_2</p>
+                      <img src="images/yellow.webp" alt="finallq" onclick="openFullImage(this.src)">
+                  </div>
                     </div>
                 </div>
             </div>
@@ -139,13 +160,26 @@
           <div id="modal-lab-activity" class="modal">
             <div class="modal-content">
               <span class="close" onclick="closeModal('lab-activity')">&times;</span>
-              <img src="images/examresult.jpg" alt="Lab Activity Project">
+          
               <h2>MIDTERM & FINAL EXAM</h2>
               <p>Successfully completed both Midterm and Final examinations in Human-Computer Interaction (ITEC101)
-                 under the instruction of Mr. Johneros Puyo, demonstrating solid understanding of user-centered design
-                  principles, usability, and interaction techniques.</p>
+                under the instruction of Mr. Johneros Puyo, demonstrating solid understanding of user-centered design
+                principles, usability, and interaction techniques.</p>
+          
+              <!-- Container for side-by-side images -->
+              <div class="image-row">
+                <div class="image-box">
+                  <img src="quizzes/midterm.jpg" alt="Midterm Result">
+                  <p class="image-label">Midterm Exam</p>
+                </div>
+                <div class="image-box">
+                  <img src="images/examresult.jpg" alt="Final Result">
+                  <p class="image-label">Final Exam</p>
+                </div>
             </div>
-          </div>
+          </div></div>
+
+
       
           <!-- Lab Activity -->
           <div class="portfolio-card" data-id="exams">
@@ -162,10 +196,15 @@
               <span class="close" onclick="closeModal('exams')">&times;</span>
               <img src="images/enchanted.png" alt="Exams Project">
               <h2>Enchanted Beauty</h2>
-              <p>Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
-                self-care, and confidence. We believe that beauty is more than just makeup it’s a feeling,
-                 an experience, and a way to express yourself. Our mission is to make beauty accessible, 
-                 effortless, and fun for everyone.</p>
+              <p>
+                Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
+                self-care, and confidence. We believe that beauty is more than just makeup — it’s a feeling,
+                an experience, and a way to express yourself. Our mission is to make beauty accessible, 
+                effortless, and fun for everyone.
+                <a href="https://wendu13.github.io/WebPortfolio/projects/Enchanted%20Beauty/" target="_blank">
+                  Visit here
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -283,7 +322,7 @@
 
 <!-- FOOTER -->
 <footer class="footer-container">
-        <p>&copy; --ITEC 101 MywebPortfolio | Wendy Francisco | 202106917 | BSIT3A &reg</p>
+        <p>&copy; ITEC 101 MywebPortfolio | Wendy Francisco | 202106917 | BSIT3A &reg</p>
 </footer>
 
 
