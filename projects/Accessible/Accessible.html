@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accessible To-Do List</title>
+  <style>
+
+    
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0e0e0; /* light gray */
+      margin: 0;
+      padding: 0;
+    }
+
+    a.skip-link {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+
+    a.skip-link:focus {
+      top: 10px;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f8f8f8;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    main {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #8a8989;
+      border-radius: 4px;
+      background-color: #cbd4d9; /* blue-gray background */
+      color: #000; /* make text readable */
+    }
+
+    button {
+      width: 100%;
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    button:focus {
+      outline: 2px solid #ff0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-top: 10px;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    * {
+      pointer-events: none;
+    }
+
+    input, button, a, [tabindex], select, textarea {
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to Main Content</a>
+
+  <header>
+    <h1>Accessible To-Do List</h1>
+  </header>
+
+  <nav>
+    <a href="#" tabindex="1">Home</a>
+    <a href="#" tabindex="2">Instructions</a>
+    <a href="#" tabindex="3">My Tasks</a>
+  </nav>
+
+  <main id="main">
+    <div class="container">
+      <section aria-labelledby="instructions-heading">
+        <h2 id="instructions-heading">Instructions</h2>
+        <p>Use the form below to add tasks. Use the keyboard (Tab, Enter) to navigate and interact.</p>
+      </section>
+
+      <section aria-labelledby="tasks-heading">
+        <h2 id="tasks-heading">My Tasks</h2>
+        <form id="task-form">
+          <label for="task-input">New Task</label>
+          <input type="text" id="task-input" aria-label="New task" tabindex="4" required />
+          <button type="submit" tabindex="5">Add Task</button>
+        </form>
+
+        <ul id="task-list" aria-live="polite"></ul>
+        <div id="status" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('task-form');
+    const input = document.getElementById('task-input');
+    const list = document.getElementById('task-list');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const task = input.value.trim();
+      if (task) {
+        const li = document.createElement('li');
+        li.textContent = task;
+        list.appendChild(li);
+        status.textContent = `Task "${task}" added.`;
+        input.value = '';
+        input.focus();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -104,15 +104,15 @@
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <p>Post-Test 1</p>
-                            <img src="quizzes/Post test/PT1.jpg" alt="Posttest1" onclick="openFullImage(this.src)">
+                            <img src="images/yellow.webp" alt="Posttest1" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 2</p>
-                            <img src="quizzes/Post test/PT2.jpg" alt="Posttest2" onclick="openFullImage(this.src)">
+                            <img src="images/yellow.webp" alt="Posttest2" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 3</p>
-                            <img src="quizzes/Post test/PT3.jpg" alt="Posttest3" onclick="openFullImage(this.src)">
+                            <img src="images/yellow.webp" alt="Posttest3" onclick="openFullImage(this.src)">
                         </div>
                         <div class="gallery-item">
                             <p>Post-Test 4</p>
@@ -121,14 +121,6 @@
                         <div class="gallery-item">
                             <p>Post-Test 5</p>
                             <img src="quizzes/Post test/quiz5.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                          <p>Post-Test 1 (Final)</p>
-                          <img src="quizzes/Post test/PT1F.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                          <p>Post-Test 1 (Final)</p>
-                          <img src="quizzes/Post test/PT2F.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
                         </div>
                     </div>
 
@@ -142,24 +134,32 @@
                     <div class="gallery-item">
                       <p>Midterm_2</p>
                       <img src="quizzes/long quiz/midtermLQ2.jpg" alt="midtermlq" onclick="openFullImage(this.src)">
+                  </div>
+                    <div class="gallery-item">
+                        <p>Final_1</p>
+                        <img src="images/yellow.webp" alt="finallq" onclick="openFullImage(this.src)">
                     </div>
+                    <div class="gallery-item">
+                      <p>Final_2</p>
+                      <img src="images/yellow.webp" alt="finallq" onclick="openFullImage(this.src)">
+                  </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="portfolio-card" data-id="exams">
+        <div class="portfolio-card" data-id="lab-activity">
             <img src="images/exam1.png" alt="portfolio2">
             <div class="portfolio-text">
               <h3>Examination Results</h3>
-              <p class="see-more" onclick="openModal('exams')">View</p>
+              <p class="see-more" onclick="openModal('lab-activity')">View</p>
             </div>
           </div>
       
           <!-- Modal -->
-          <div id="modal-exams" class="modal">
+          <div id="modal-lab-activity" class="modal">
             <div class="modal-content">
-              <span class="close" onclick="closeModal('exams')">&times;</span>
+              <span class="close" onclick="closeModal('lab-activity')">&times;</span>
           
               <!-- Container for side-by-side images -->
               <div class="image-row">
@@ -183,84 +183,31 @@
 
       
           <!-- Lab Activity -->
-          <div class="portfolio-card" data-id="lab-activity">
+          <div class="portfolio-card" data-id="exams">
             <img src="images/actlab.png" alt="portfolio3">
             <div class="portfolio-text">
               <h3>Laboratory Activities</h3>
-              <p class="see-more" onclick="openModal('lab-activity')">View</p>
+              <p class="see-more" onclick="openModal('exams')">View</p>
             </div>
           </div>
       
-                    <!-- Modal -->
-          <div id="modal-lab-activity" class="modal">
-            <div class="modal-content scrollable">
-              <span class="close" onclick="closeModal('lab-activity')">&times;</span>
-
-              <div class="website-entry">
-                <img src="images/enchanted.png" alt="Enchanted Beauty">
-                <h2>Enchanted Beauty</h2>
-                <p>
-                  Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
-                  self-care, and confidence...
-                  <a href="https://wendu13.github.io/WebPortfolio/projects/Enchanted%20Beauty/" target="_blank">Visit here</a>
-                </p>
-              </div>
-
-              <div class="website-entry spaced-top">
-                <img src="projects/Accessible/Picture.png" alt="Accessible">
-                <h2>Accessible To-do List</h2>
-                <p>
-                  This lab activity is designed to create a fully keyboard-accessible
-                   to-do list webpage, focusing on web accessibility and user interaction without using a mouse.
-                  <a href="https://yourlink2.com" target="_blank">Visit here</a>
-                </p>
-              </div>
-
-              <div class="website-entry spaced-top">
-                <img src="projects/Registration/registration.png" alt="registration">
-                <h2>Registration</h2>
-                <p>
-                  This website allows users to create an account through a registration form, 
-                  storing their information in a connected database. It supports account creation, l
-                  ogin authentication, and securely handles user data.
-                </p>
-              </div>
-
-              <div class="website-entry spaced-top">
-                  <!-- Add image row here -->
-                  <div class="image-row">
-                    <img src="projects/MIT text-to-Speech/SPEECH1.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT text-to-Speech/SPEECH2.jpg" alt="Gallery Pic 2">
-                    <img src="projects/MIT text-to-Speech/SPEECH3.jpg" alt="Gallery Pic 3">
-                    <img src="projects/MIT text-to-Speech/SPEECH4.jpg" alt="Gallery Pic 4">
-                  </div>
-                <h2>MIT Text-to-Speech</h2>
-                <p>
-                    To design a simple Android application that converts user 
-                    input into spoken words using the TextToSpeech component.
-                </p>
-              </div>              
-
-              <div class="website-entry spaced-top">
-                  <!-- Add image row here -->
-                  <div class="image-row">
-                    <img src="projects/MIT My Multimedia Journal App/page1.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page2.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page3.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page4.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page5.jpg" alt="Gallery Pic 1">
-                  </div>
-                <h2>MIT My Multimedia Journal App</h2>
-                <p>
-                  A mobile app using MIT App Inventor that allows users to take photos and videos,
-                   add captions through text or voice input, view the images, and hear the captions 
-                   read aloud using Text-to-Speech.
-                </p>
-              </div>     
-
+          <!-- Modal -->
+          <div id="modal-exams" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('exams')">&times;</span>
+              <img src="images/enchanted.png" alt="Exams Project">
+              <h2>Enchanted Beauty</h2>
+              <p>
+                Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
+                self-care, and confidence. We believe that beauty is more than just makeup — it’s a feeling,
+                an experience, and a way to express yourself. Our mission is to make beauty accessible, 
+                effortless, and fun for everyone.
+                <a href="https://wendu13.github.io/WebPortfolio/projects/Enchanted%20Beauty/" target="_blank">
+                  Visit here
+                </a>
+              </p>
             </div>
           </div>
-
         </div>
       </div>
 

@@ -379,6 +379,16 @@
   }
   
   /* Projects */
+
+  .website-entry img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain; /* Or "cover" for a cropped look */
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
   .projects {
     display: flex;
     flex-wrap: wrap;
@@ -464,6 +474,10 @@
 
   .carousel-btn.next {
     right: 2px;
+  }
+
+  .spaced-top {
+    margin-top: 80px; /* or any value you prefer */
   }
   
   .see-more,
