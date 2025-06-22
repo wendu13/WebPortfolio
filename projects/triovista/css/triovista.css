@@ -1,0 +1,360 @@
+body{
+  background-color: var(--off-white);
+  font-family: 'Figtree', sans-serif !important;
+  color: var(--deep-green);
+  text-align: justify;
+}
+h1, h2, h3, h4, h5 {
+font-family: 'Cormorant SC', serif;
+font-weight: 600;
+}
+
+.li {
+    font-family: 'Figtree', sans-serif;
+}
+
+hr {
+border: none;
+border-top: 4px solid var(--deep-green);
+margin-top: 1.5rem;
+margin-bottom: 1rem;
+}
+
+
+/*LEFT CONTAINER--------------------------------*/
+/*heading part--------*/
+.heading1 {
+display: flex;
+flex-direction: column;
+width: 100%;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* faint underline */
+padding: 0px;
+}
+.heading1 h1 {
+margin-bottom: 0.2rem;
+}
+.heading1 p {
+padding: 0.25rem 0.5rem;
+border-radius: 0.25rem;
+font-size: 0.95rem;
+display: inline-block;
+color: var(--soft-teal);
+width: 100%;
+  text-align: justify;
+}
+/*heading 2 part--------*/
+.section-heading {
+text-align: center;
+color: #003D3B;
+font-size: 1.3rem;
+font-weight: bold;
+margin-bottom: 3px; /* controls space before the underline */
+}
+.heading-underline {
+width: 100px;
+height: 3px;
+background-color: #003D3B; /* or any accent color */
+margin: 0 auto 2rem auto; /* center + 2rem gap below the line */
+border-radius: 2px;
+}
+
+/*IMAGE--------*/
+.image-frame {
+width: 4.5in;
+height: 3.5in;
+border-radius: 8px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.image-frame img {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+ border-top-left-radius: 50px;
+border-bottom-right-radius: 50px;
+}
+
+/*MINI-IMAGE--------*/
+.thumbnail-img {
+width: 90px;
+height: 95px;
+border: 2px solid var(--deep-green);
+border-radius: 10px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+.thumbnail-img:hover {
+transform: scale(1.1);
+border-color: var(--deep-green);
+}
+.thumbnail-img.active {
+border-color: var(--soft-teal);
+box-shadow:  0 0 10px  var(--soft-teal);
+}
+.main-img {
+border-radius: 8px;
+max-width: 80%;
+}
+
+/* MODAL------------------*/
+/* Gradient background for modal content */
+.gradient-bg {
+background: linear-gradient(30deg, var(--off-white, #F4F4F4), var(--off-white, #F4F4F4));
+color: #f8f9fa; /* Light text */
+}
+.text-justify {
+text-align: justify;
+}
+/* Modal body*/
+.modal-content {
+border-radius: 1rem;
+border: none;
+box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+}
+.modal-body{
+  color: #112B3C;;
+}
+/* Title styling*/
+.modal-title {
+font-weight: 600;
+font-size: 1.5rem;
+letter-spacing: 0.5px;
+text-align: center;
+color: #112B3C;
+}
+/* Description text */
+.modal-body p {
+font-size: 1rem;
+line-height: 1.6;
+color: #112B3C;
+margin: 0;
+}
+/* Image appearance */
+#modalImage {
+border-radius: 0.75rem;
+width: 100%;
+height: 100%;
+object-fit: cover;
+ display: block;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Close button*/
+.btn-close-dark {
+filter: dark(100%) invert(1);
+}
+/* Responsive tweaks (optional) */
+@media (max-width: 768px) {
+.modal-body {
+  text-align: center;
+}
+#modalImage {
+  max-width: 80%;
+  margin: 0 auto;
+}
+}
+
+
+/*LEFT CONTAINER--------------------------------*/
+/* description*/
+.condo-card {
+   background-color: transparent;
+    border: 2px solid var(--cool-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 400px;
+  }
+  .condo-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: var(--deep-green);
+  }
+  .condo-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .condo-info li {
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .condo-info li i {
+    color: var(--soft-teal);
+    margin-right: 0.75rem;
+    width: 20px;
+    text-align: center;
+  }
+
+/*MORTGAGE CALCULATOR---*/
+/* Container for calculator */
+#mortgageCalculator {
+border: 2px solid var(--cool-gray);
+border-radius: 12px;
+padding: 1.5rem;
+background-color: var(--off-white);
+line-height: 2;
+}
+/* Titles */
+#mortgageCalculator h3,
+#mortgageCalculator h4,
+#mortgageCalculator h5 {
+color: var(--deep-green);
+margin-bottom: 1rem;
+}
+/* Result section */
+#resultDetails p {
+margin-bottom: 1rem;
+color: var(--midnight-blue);
+}
+/* Display span */
+#dpDisplay {
+display: inline-block;
+margin-top: 0.5rem;
+color: var(--midnight-blue);
+font-weight: bold;
+}
+/* Responsive behavior */
+@media (max-width: 576px) {
+#mortgageCalculator {
+  padding: 1rem;
+}
+#resultDetails p,
+#mortgageCalculator label {
+  font-size: 0.95rem;
+}
+}
+
+
+/*term years------------------------------*/
+/* Smaller button and select: decrease by ~10% */
+select.termyearsSelect {
+color: var(--deep-green);
+border: none !important;
+border-left: 2px solid var(--midnight-blue) !important;
+border-bottom: 2px solid var(--midnight-blue) !important;
+border-radius:  0px 50px 0px 50px;
+padding: 0.2rem 0.55rem;
+background-color: transparent;
+font-size: 0.9rem;
+-webkit-appearance: none !important;
+-moz-appearance: none !important;       
+appearance: none !important;
+background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="%239ABEBB" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658A.5.5 0 0 1 2.856 5h10.288a.5.5 0 0 1 .405.658l-4.796 5.482a.5.5 0 0 1-.758 0z"/></svg>');
+background-repeat: no-repeat;
+background-position: right 0.75rem center;
+background-size: 0.9rem;
+cursor: pointer;
+width: 100%;
+box-sizing: border-box;
+transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+
+select.termyearsSelect:focus {
+outline: none;
+border-left-color: 2px solid var(--midnight-blue);
+border-bottom-color: 2px solid var(--midnight-blue);
+color: var(--midnight-blue);
+background-color: var(--off-white);
+}
+
+select.termyearsSelect:hover {
+border-left-color: var(--soft-teal);
+border-bottom-color: var(--soft-teal);
+}
+
+select.termyearsSelect option {
+padding: 0.52rem 1rem;
+font-size: 0.97rem;
+color: var(--deep-green);
+background-color: var(--off-white);
+border-radius: 30px;
+}
+/* Container to keep button & select aligned and same width */
+.mt-4.mb-3 {
+display: flex;
+gap: 0.5rem;
+align-items: center;
+max-width: 470px;
+width: 100%;
+}
+
+
+/*appoinmnet form*/
+.appointment{
+margin: 20px;
+padding: 10px;
+}
+.appoint-box {
+border: 2px solid var(--midnight-blue);
+border-radius: 12px;
+background-color: #fff;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+display: block;
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+
+}
+/* Spacing fixes for form elements inside .appoint-box */
+.appoint-box .form-label {
+display: block;
+margin: 0.35rem 1.5px; /* spacing below label */
+font-weight: 600;
+color: var(--deep-green);
+padding: 0 1rem ;
+}
+.appoint-box input::placeholder,
+.appoint-box textarea::placeholder {
+color: #666; 
+opacity: 1; 
+}
+.appoint-box input,
+.appoint-box textarea 
+.appoint-box select {
+width: 100%;
+padding: 0.4rem 0.4rem; /* Decreased padding */
+font-size: 0.9rem;       /* Smaller font size */
+margin-bottom: 0.7rem; /* spacing between fields */
+font-size: 1rem;
+color: #333;
+background-color: transparent;
+border: none;
+border-left: 2px solid var(--midnight-blue);
+border-bottom: 2px solid var(--midnight-blue);
+border-radius: 10px;
+box-shadow: none;
+outline: none;
+}
+.appoint-box input:focus,
+.appoint-box textarea:focus {
+outline: none;
+box-shadow: none;
+border-left: 2px solid var(--midnight-blue);
+border-bottom: 2px solid var(--midnight-blue);
+}
+@media (max-width: 767.98px) {
+#contact-info, .appoint-box {
+  padding: 1.5rem;
+}
+}
+@media (max-width: 576px) {
+
+.appoint-box {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .appoint-box input,
+.appoint-box textarea,
+.appoint-box select {
+  padding: 0.6rem 0.85rem;
+  font-size: 1rem;
+}
+}
