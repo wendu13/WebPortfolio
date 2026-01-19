@@ -10,25 +10,54 @@
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="music/background.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Music Sparkle -->
+<audio id="music-sparkle" loop>
+  <source src="about/Sparkle.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Music Controls -->
+<div class="music-controls">
+  <button id="music-toggle" onclick="toggleMusic()">
+    <i class="fas fa-music"></i>
+  </button>
+</div>
+
+<!-- Cherry Blossoms Container -->
+<div id="cherry-blossoms" class="cherry-blossoms"></div>
 
 
   <div class="header">
     <div class="header-inner">
       <div class="profile-container">
-        <img src="images/wendu.jpg" alt="Wendy Francisco profile photo" class="profile-img">
+        <img src="images/wendy.jfif" alt="Wendy Francisco profile photo" class="profile-img">
         <div class="name-role">
             <div class="name-role">
-                <a href="#top" class="name">WENDY MENDOZA-FRANCISCO</a> <!-- Link to the top of the page -->
+                <a href="#top" class="name">WENDY MENDOZA-FRANCISCO</a>
                 <div class="role">General Virtual Assistant</div>
               </div>
         </div>
       </div>
+      
+      <!-- Cherry Blossom Tree inside Navigation -->
+      <div class="cherry-tree-bg" onclick="startCherryBlossoms()">
+        <img src="images/cherry.png" alt="Cherry Blossom Tree" class="tree-bg-image">
+      </div>
+
       <div class="tabs">
         <a href="#about" class="tab">About</a>
         <a href="#portfolio" class="tab">Portfolio</a>
-        <a href="#projects" class="tab">Career</a>
+        <a href="#career" class="tab">Career</a>
         <a href="#contact" class="tab">Contact</a>
       </div>
     </div>
@@ -49,243 +78,85 @@
         <p>With a mix of academic training and hands-on experience, I'm passionate about helping organizations stay organized, creative, and productive.</p>
     </div>
 
-<!-- PORTFOLIO SECTION -->
+<!-- PROJECTS SECTION -->
 <div id="portfolio" class="section">
-    <h2>Academic Portfolio</h2>
+    <h2>Web Systems & Projects</h2>
     <div class="portfolio">
 
-    <!-- Quizzes -->
-    <div class="portfolio-card" data-id="quizzes">
-        <img src="images/quiz.png" alt="portfolio1">
-        <div class="portfolio-text">
-          <h3>Completed Quizzes</h3>
-          <p class="see-more" onclick="openModal('quizzes')">View</p>
+    <!-- CAWD Cafe - Employee and Stock Inventory Database -->
+    <div class="project-row">
+        <div class="project-content">
+            <h3>CAWD Cafe</h3>
+            <h4>Employee and Stock Inventory Database</h4>
+            <p>
+                A comprehensive database management system for CAWD Cafe that handles employee records 
+                and stock inventory management. This system streamlines operations by tracking employee 
+                information, managing stock levels, and providing real-time inventory updates for efficient 
+                cafe operations and resource management.
+            </p>
         </div>
-      </div>
-
-    <!-- Modal -->
-    <div id="modal-quizzes" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('quizzes')">&times;</span>
-          <div class="gallery">
-                    <!-- Pre-Test Images -->
-                    <h3>Pre-Test</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <p>Pre-Test 1</p>
-                            <img src="quizzes/Pretest/pretest1.png" alt="Pretest1" onclick="openFullImage(this.src)">
-                            <a href="quizzes/Pretest/PRETEST1.pdf" target="_blank" class="view-pdf">View PDF</a>
-                        </div>
-                        <div class="gallery-item">
-                            <p>Pre-Test 2</p>
-                            <img src="quizzes/Pretest/pretest2.png" alt="Pretest2" onclick="openFullImage(this.src)">
-                            <a href="quizzes/Pretest/PRE-TEST2.pdf" target="_blank" class="view-pdf">View PDF</a>
-                        </div>
-                        <div class="gallery-item">
-                            <p>Pre-Test 3</p>
-                            <img src="quizzes/Pretest/pretest3.png" alt="Pretest3" onclick="openFullImage(this.src)">
-                            <a href="quizzes/Pretest/PRETEST3.pdf" target="_blank" class="view-pdf">View PDF</a>
-                        </div>
-                        <div class="gallery-item">
-                            <p>Pre-Test 4</p>
-                            <img src="quizzes/Pretest/pretest4.png" alt="Pretest4" onclick="openFullImage(this.src)">
-                            <a href="quizzes/Pretest/PRE-TEST4.pdf" target="_blank" class="view-pdf">View PDF</a>
-                        </div>
-                        <div class="gallery-item">
-                            <p>Pre-Test 5</p>
-                            <img src="quizzes/Pretest/pretest5.png" alt="Pretest5" onclick="openFullImage(this.src)">
-                            <a href="quizzes/Pretest/Pre-Test 5.pdf" target="_blank" class="view-pdf">View PDF</a>
-                        </div>
-                    </div>
-
-                    <!-- Post-Test Images -->
-                    <h3>Post-Test</h3>
-                    <br>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <p>Post-Test 1</p>
-                            <img src="quizzes/Post test/PT1.jpg" alt="Posttest1" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                            <p>Post-Test 2</p>
-                            <img src="quizzes/Post test/PT2.jpg" alt="Posttest2" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                            <p>Post-Test 3</p>
-                            <img src="quizzes/Post test/PT3.jpg" alt="Posttest3" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                            <p>Post-Test 4</p>
-                            <img src="quizzes/Post test/quiz4.jpg" alt="Posttest4" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                            <p>Post-Test 5</p>
-                            <img src="quizzes/Post test/quiz5.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                          <p>Post-Test 1 (Final)</p>
-                          <img src="quizzes/Post test/PT1F.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
-                        </div>
-                        <div class="gallery-item">
-                          <p>Post-Test 1 (Final)</p>
-                          <img src="quizzes/Post test/PT2F.jpg" alt="Posttest5" onclick="openFullImage(this.src)">
-                        </div>
-                    </div>
-
-                    <h3>Long Quiz</h3>
-                    <br>
-                    <div class="gallery-grid">
-                      <div class="gallery-item">
-                        <p>Midterm_1</p>
-                        <img src="quizzes/long quiz/midtermLQ.jpg" alt="midtermlq" onclick="openFullImage(this.src)">
-                    </div>
-                    <div class="gallery-item">
-                      <p>Midterm_2</p>
-                      <img src="quizzes/long quiz/midtermLQ2.jpg" alt="midtermlq" onclick="openFullImage(this.src)">
-                    </div>
-                    </div>
-                </div>
-            </div>
+        <div class="project-image">
+            <img src="projects/CAWD Cafe/1.png" alt="CAWD Cafe Employee and Stock Inventory Database" onclick="openGalleryLightbox(['projects/CAWD Cafe/1.png', 'projects/CAWD Cafe/2.png', 'projects/CAWD Cafe/3.png', 'projects/CAWD Cafe/4.png', 'projects/CAWD Cafe/5.png', 'projects/CAWD Cafe/6.png'], 0)">
         </div>
-        
-        <div class="portfolio-card" data-id="exams">
-            <img src="images/exam1.png" alt="portfolio2">
-            <div class="portfolio-text">
-              <h3>Examination Results</h3>
-              <p class="see-more" onclick="openModal('exams')">View</p>
-            </div>
-          </div>
-      
-          <!-- Modal -->
-          <div id="modal-exams" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal('exams')">&times;</span>
-          
-              <!-- Container for side-by-side images -->
-              <div class="image-row">
-                <div class="image-box">
-                  <p class="image-label">Midterm Exam</p>
-                  <img src="exams/midterm.jpg" alt="Midterm Result" onclick="openFullImage(this.src)">
-                </div>
-                <div class="image-box">
-                  <p class="image-label">Final Exam</p>
-                  <img src="images/examresult.jpg" alt="Final Result" onclick="openFullImage(this.src)">
-                </div>
-            </div>
+    </div>
 
-              <h2>MIDTERM & FINAL EXAM</h2>
-              <p>Successfully completed both Midterm and Final examinations in Human-Computer Interaction (ITEC101)
-                under the instruction of Mr. Johneros Puyo, demonstrating solid understanding of user-centered design
-                principles, usability, and interaction techniques.</p>
-        
-          </div>
+    <!-- Payroll and Timekeeping System - Capstone Project -->
+    <div class="project-row">
+        <div class="project-content">
+            <h3>Payroll and Timekeeping System</h3>
+            <h4>Capstone Project</h4>
+            <p>
+                A comprehensive payroll and timekeeping system designed as a capstone project. 
+                This system allows users to upload Excel files containing employee data and automatically 
+                generate complete payroll calculations. Features include time tracking, salary computation, 
+                and automated payroll generation with detailed reports.
+            </p>
         </div>
-
-      
-          <!-- Lab Activity -->
-          <div class="portfolio-card" data-id="lab-activity">
-            <img src="images/actlab.png" alt="portfolio3">
-            <div class="portfolio-text">
-              <h3>Laboratory Activities</h3>
-              <p class="see-more" onclick="openModal('lab-activity')">View</p>
-            </div>
-          </div>
-      
-                    <!-- Modal -->
-          <div id="modal-lab-activity" class="modal">
-            <div class="modal-content scrollable">
-              <span class="close" onclick="closeModal('lab-activity')">&times;</span>
-
-              <div class="website-entry">
-                <img src="images/enchanted.png" alt="Enchanted Beauty">
-                <h2>Enchanted Beauty</h2>
-                <p>
-                  Welcome to Enchanted Beauty Blog, your go-to destination for all things beauty, 
-                  self-care, and confidence...
-                  <a href="https://wendu13.github.io/WebPortfolio/projects/Enchanted%20Beauty/" target="_blank">Visit here</a>
-                </p>
-              </div>
-
-              <div class="website-entry spaced-top">
-                <img src="projects/Accessible/Picture.png" alt="Accessible">
-                <h2>Accessible To-do List</h2>
-                <p>
-                  This lab activity is designed to create a fully keyboard-accessible
-                   to-do list webpage, focusing on web accessibility and user interaction without using a mouse.
-                  <a href="https://yourlink2.com" target="_blank">Visit here</a>
-                </p>
-              </div>
-
-              <div class="website-entry spaced-top">
-                <img src="projects/Registration/registration.png" alt="registration">
-                <h2>Registration</h2>
-                <p>
-                  This website allows users to create an account through a registration form, 
-                  storing their information in a connected database. It supports account creation, l
-                  ogin authentication, and securely handles user data.
-                </p>
-              </div>
-
-              <div class="website-entry spaced-top">
-                  <!-- Add image row here -->
-                  <div class="image-row">
-                    <img src="projects/MIT text-to-Speech/SPEECH1.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT text-to-Speech/SPEECH2.jpg" alt="Gallery Pic 2">
-                    <img src="projects/MIT text-to-Speech/SPEECH3.jpg" alt="Gallery Pic 3">
-                    <img src="projects/MIT text-to-Speech/SPEECH4.jpg" alt="Gallery Pic 4">
-                  </div>
-                <h2>MIT Text-to-Speech</h2>
-                <p>
-                    To design a simple Android application that converts user 
-                    input into spoken words using the TextToSpeech component.
-                </p>
-              </div>              
-
-              <div class="website-entry spaced-top">
-                  <!-- Add image row here -->
-                  <div class="image-row">
-                    <img src="projects/MIT My Multimedia Journal App/page1.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page2.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page3.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page4.jpg" alt="Gallery Pic 1">
-                    <img src="projects/MIT My Multimedia Journal App/page5.jpg" alt="Gallery Pic 1">
-                  </div>
-                <h2>MIT My Multimedia Journal App</h2>
-                <p>
-                  A mobile app using MIT App Inventor that allows users to take photos and videos,
-                   add captions through text or voice input, view the images, and hear the captions 
-                   read aloud using Text-to-Speech.
-                </p>
-              </div>     
-
-            </div>
-          </div>
-
+        <div class="project-image">
+            <img src="projects/Payroll System/1.png" alt="Payroll and Timekeeping System" onclick="openGalleryLightbox(['projects/Payroll System/1.png', 'projects/Payroll System/2.png', 'projects/Payroll System/3.png', 'projects/Payroll System/4.png', 'projects/Payroll System/6.png', 'projects/Payroll System/7.png', 'projects/Payroll System/8.png', 'projects/Payroll System/9.png', 'projects/Payroll System/10.png'], 0)">
         </div>
-      </div>
+    </div>
+
+    <!-- TrioVista Heights - Real Estate E-commerce -->
+    <div class="project-row">
+        <div class="project-content">
+            <h3>TrioVista Heights</h3>
+            <h4>Real Estate E-commerce Website</h4>
+            <p>
+                TrioVista Heights is a real estate e-commerce website that promotes ten modern condominium towers. 
+                Users can explore condo units, prices, amenities, and locations. They can send inquiries, 
+                take quizzes, and book appointments—all without creating an account.
+            </p>
+        </div>
+        <div class="project-image">
+            <img src="projects/triovista/image1.png" alt="TrioVista Heights Real Estate" onclick="openGalleryLightbox(['projects/triovista/image1.png', 'projects/triovista/image2.png', 'projects/triovista/image3.png', 'projects/triovista/image4.png', 'projects/triovista/image5.png', 'projects/triovista/image6.png', 'projects/triovista/image7.png'], 0)">
+        </div>
+    </div>
+
+    </div>
+</div>
 
     <!-- PROJECT SECTION -->
-      <div id="projects" class="section">
+      <div id="career" class="section">
         <h2>Career Highlights</h2>
         <br>
       <div class="carousel-container">
         <button class="carousel-btn prev">&#10094;</button>
-        <div class="carousel-track">
-          <!-- Cloned last -->
-          <div class="carousel-slide">
-            <img src="images/sfcc.png" alt="Project 3">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <!-- Slides -->
+            <div class="carousel-slide">
+            <img src="images/sfcc.png" alt="SFCC">
             <div class="text-content">
               <h3>SFCC</h3>
               <p>With 7 years at South Forbes City College, I specialize in academic record management, 
                 compliance with CHED, DEPED, and TESDA. <br>
-                <a href="about/WENDY M FRANCISCO CV.pdf" target="_blank">Curriculum Vitae</a>
+                <a href="about/resume.pdf" target="_blank">Curriculum Vitae</a>
               </p>
             </div>
-          </div>
-      
-          <!-- Real slides -->
-          <div class="carousel-slide">
-            <img src="images/canva.webp" alt="Project 1">
+            </div>
+            <div class="carousel-slide">
+            <img src="images/canva.webp" alt="Canva">
             <div class="text-content">
               <h3>CANVA</h3>
               <p>Bright and unique 2025 calendar showcasing charming Korean cartoon girls, each month with a fresh, 
@@ -294,36 +165,16 @@
                 target="_blank">View Project</a>
               </p>
             </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="images/upwork.svg" alt="Project 2">
+            </div>
+            <div class="carousel-slide">
+            <img src="images/upwork.svg" alt="Upwork">
             <div class="text-content">
               <h3>UPWORK</h3>
-              <p>With a 5-star ⭐⭐⭐⭐⭐ Upwork rating, I offer expert virtual assistance in email 
+              <p>With a 5-star ⭐⭐⭐⭐⭐⭐⭐ Upwork rating, I offer expert virtual assistance in email 
                 management, data entry, customer support, and more. <br>
                 <a href="https://www.upwork.com/freelancers/wendymf013?promobnr=1" target="_blank">View Profile</a>
               </p>
             </div>
-          </div>
-          <div class="carousel-slide">
-            <img src="images/sfcc.png" alt="Project 3">
-            <div class="text-content">
-              <h3>SFCC</h3>
-                <p>With 7 years as Registrar Staff at South Forbes City College, I specialize in academic 
-                  record management, compliance with CHED, DEPED, and TESDA. <br>
-                  <a href="about/WENDY M FRANCISCO CV.pdf" target="_blank">Curriculum Vitae</a>
-                </p>
-            </div>
-          </div>
-      
-          <!-- Cloned first -->
-          <div class="carousel-slide">
-            <img src="images/canva.webp" alt="Project 1">
-            <div class="text-content">
-              <h3>CANVA</h3>
-              <p>Bright and unique 2025 calendar showcasing charming Korean cartoon girls, each month with a fresh, dynamic theme. <br>
-                <a href="https://www.canva.com/design/DAGQ5GVO0_0/TTD85lT7r8hixqFTxILo4g/edit" target="_blank">View Project</a>
-              </p>
             </div>
           </div>
         </div>
@@ -334,7 +185,7 @@
 
 <!-- CONTACT SECTION -->
 <div id="contact" class="section">
-    <h2 style="color: white;">Get in Touch</h2>
+    <h2>Get in Touch</h2>
     <div class="contact-container">
       <!-- Contact Info -->
     <div class="contact-left">
@@ -357,17 +208,18 @@
       <!-- Contact Form -->
       <div class="contact-form-container">
         <h3>Send Me a Message</h3>
-        <form class="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" autocomplete="name" required/>
-  
-          <label for="email">Email:</label>
+        <form class="contact-form" id="contact-form">
+          <label for="email">Your Email:</label>
           <input type="email" id="email" name="email" autocomplete="email" required/>
+  
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" autocomplete="subject" required/>
   
           <label for="message">Message:</label>
           <textarea id="message" name="message" rows="4" autocomplete="off" required></textarea>
   
-          <button type="submit">Send</button>
+          <button type="submit" id="submit-btn">Send</button>
+          <div id="form-message" class="form-message"></div>
         </form>
       </div>
     </div>
@@ -381,6 +233,10 @@
 
 
   <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init("3Jov_xfKsuUR0hFET");
+    })();
 
     document.querySelector('.name').addEventListener('click', function(e) {
       e.preventDefault();
@@ -418,15 +274,52 @@
       });
     });
 
-    // Prevent default form submission
-    const form = document.querySelector('.contact-form');
-    form.addEventListener('submit', e => {
+    // Real-time email functionality
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formMessage = document.getElementById('form-message');
+
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you for your message!');
-      form.reset();
+      
+      // Disable submit button and show loading
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formMessage.textContent = '';
+      formMessage.className = 'form-message';
+
+      // Get form data
+      const formData = {
+        from_email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        to_email: 'wendy.mendoza@cvsu.edu.ph' // Your email
+      };
+
+      // Send email using EmailJS
+      emailjs.send('service_7v00mi8', 'template_mrsqgu8', formData)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+          formMessage.className = 'form-message success';
+          form.reset();
+        }, function(error) {
+          console.log('FAILED...', error);
+          formMessage.textContent = 'Oops! Something went wrong. Please try again or email me directly.';
+          formMessage.className = 'form-message error';
+        })
+        .finally(function() {
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send';
+        });
     });
 
-    function openModal(id) {
+    function openModal(id, e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       document.getElementById('modal-' + id).style.display = 'block';
     }
 
@@ -444,7 +337,11 @@
       });
     }
 
-    function openFullImage(src) {
+    function openFullImage(src, e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       document.getElementById('lightbox').style.display = 'flex';
       document.getElementById('lightbox-img').src = src;
     }
@@ -453,48 +350,265 @@
       document.getElementById('lightbox').style.display = 'none';
     }
 
-    // Carousel functionality
-    const track = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
+    // Music Controls
+    let isMusicPlaying = false;
+    let isSparklePlaying = false;
+    const bgMusic = document.getElementById('bg-music');
+    const musicSparkle = document.getElementById('music-sparkle');
+    const musicToggle = document.getElementById('music-toggle');
 
-    let index = 1;
-    const slideWidth = slides[0].offsetWidth + 100; // 150px margin * 2 = 300
-
-    track.style.transform = `translateX(-${slideWidth * index}px)`;
-
-    function moveToIndex(newIndex) {
-      index = newIndex;
-      track.style.transition = 'transform 0.4s ease-in-out';
-      track.style.transform = `translateX(-${slideWidth * index}px)`;
+    function toggleMusic() {
+      if (isMusicPlaying) {
+        bgMusic.pause();
+        musicSparkle.pause();
+        musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+        musicToggle.classList.remove('playing');
+        isMusicPlaying = false;
+        isSparklePlaying = false;
+      } else {
+        bgMusic.play().catch(e => console.log('Music play failed:', e));
+        musicSparkle.play().catch(e => console.log('Sparkle play failed:', e));
+        musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+        musicToggle.classList.add('playing');
+        isMusicPlaying = true;
+        isSparklePlaying = true;
+      }
     }
 
-    nextBtn.addEventListener('click', () => {
-      if (index >= slides.length - 1) return;
-      moveToIndex(index + 1);
+    // Auto-play music on user interaction (browser requirement)
+    document.addEventListener('click', function initMusic() {
+      if (!isMusicPlaying) {
+        bgMusic.play().catch(e => console.log('Auto-play prevented'));
+        musicSparkle.play().catch(e => console.log('Sparkle auto-play prevented'));
+        isMusicPlaying = true;
+        isSparklePlaying = true;
+        musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+        musicToggle.classList.add('playing');
+        document.removeEventListener('click', initMusic);
+      }
+    }, { once: true });
+
+    // Project Image Navigation
+    const projectImages = {
+      'cawd-cafe': ['projects/CAWD Cafe/1.png', 'projects/CAWD Cafe/2.png', 'projects/CAWD Cafe/3.png', 'projects/CAWD Cafe/4.png', 'projects/CAWD Cafe/5.png', 'projects/CAWD Cafe/6.png'],
+      'payroll-system': ['projects/Payroll System/1.png', 'projects/Payroll System/2.png', 'projects/Payroll System/3.png', 'projects/Payroll System/4.png', 'projects/Payroll System/6.png', 'projects/Payroll System/7.png', 'projects/Payroll System/8.png', 'projects/Payroll System/9.png', 'projects/Payroll System/10.png'],
+      'triovista': ['projects/triovista/image1.png']
+    };
+
+    const currentProjectIndex = {
+      'cawd-cafe': 0,
+      'payroll-system': 0,
+      'triovista': 0
+    };
+
+    function changeProjectImage(projectId, direction) {
+      const images = projectImages[projectId];
+      const currentIndex = currentProjectIndex[projectId];
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex < 0) {
+        newIndex = images.length - 1;
+      } else if (newIndex >= images.length) {
+        newIndex = 0;
+      }
+      
+      currentProjectIndex[projectId] = newIndex;
+      
+      const track = document.getElementById(projectId + '-track');
+      const img = track.querySelector('img');
+      img.src = images[newIndex];
+      img.onclick = function() {
+        openGalleryLightbox(images, newIndex);
+      };
+    }
+
+    // Gallery Lightbox Functions
+    let currentGalleryImages = [];
+    let currentGalleryIndex = 0;
+
+    function openGalleryLightbox(images, index) {
+      currentGalleryImages = images;
+      currentGalleryIndex = index;
+      const lightbox = document.getElementById('gallery-lightbox');
+      const lightboxImg = document.getElementById('gallery-lightbox-img');
+      
+      lightboxImg.src = images[currentGalleryIndex];
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGalleryLightbox() {
+      const lightbox = document.getElementById('gallery-lightbox');
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeGalleryImage(direction) {
+      currentGalleryIndex += direction;
+      
+      if (currentGalleryIndex < 0) {
+        currentGalleryIndex = currentGalleryImages.length - 1;
+      } else if (currentGalleryIndex >= currentGalleryImages.length) {
+        currentGalleryIndex = 0;
+      }
+      
+      const lightboxImg = document.getElementById('gallery-lightbox-img');
+      lightboxImg.src = currentGalleryImages[currentGalleryIndex];
+    }
+
+    // Keyboard support for gallery
+    document.addEventListener('keydown', function(e) {
+      const lightbox = document.getElementById('gallery-lightbox');
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') {
+          changeGalleryImage(-1);
+        } else if (e.key === 'ArrowRight') {
+          changeGalleryImage(1);
+        } else if (e.key === 'Escape') {
+          closeGalleryLightbox();
+        }
+      }
     });
 
-    prevBtn.addEventListener('click', () => {
-      if (index <= 0) return;
-      moveToIndex(index - 1);
-    });
+    function toggleMoreImages(element) {
+      const hiddenImages = element.nextElementSibling;
+      if (hiddenImages.style.display === 'none') {
+        hiddenImages.style.display = 'grid';
+        hiddenImages.classList.add('show');
+        element.textContent = element.textContent.replace(/\+\d+ more/, 'Show less');
+      } else {
+        hiddenImages.style.display = 'none';
+        hiddenImages.classList.remove('show');
+        element.textContent = element.textContent.replace(/Show less/, '+' + hiddenImages.children.length + ' more');
+      }
+    }
 
-    track.addEventListener('transitionend', () => {
-      if (index === slides.length - 1) {
+    // Cherry Blossom Animation
+    function startCherryBlossoms() {
+      const container = document.getElementById('cherry-blossoms');
+      const colors = ['#ffb3d9', '#ff99cc', '#ffccdd', '#ff66b3', '#ff99c2'];
+      
+      for (let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          createCherryBlossom(container, colors);
+        }, i * 100);
+      }
+    }
+
+    function createCherryBlossom(container, colors) {
+      const blossom = document.createElement('div');
+      blossom.className = 'cherry-petal';
+      blossom.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      blossom.style.left = Math.random() * 100 + '%';
+      blossom.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      blossom.style.animationDelay = Math.random() * 2 + 's';
+      
+      container.appendChild(blossom);
+      
+      // Remove blossom after animation
+      setTimeout(() => {
+        blossom.remove();
+      }, 5000);
+    }
+
+    // Carousel functionality
+    (function() {
+      const container = document.querySelector('.carousel-container');
+      if (!container) return;
+
+      const track = container.querySelector('.carousel-track');
+      const prevBtn = container.querySelector('.carousel-btn.prev');
+      const nextBtn = container.querySelector('.carousel-btn.next');
+      if (!track || !prevBtn || !nextBtn) return;
+
+      let slides = Array.from(track.querySelectorAll('.carousel-slide'));
+      if (slides.length < 2) return;
+
+      const firstClone = slides[0].cloneNode(true);
+      const lastClone = slides[slides.length - 1].cloneNode(true);
+      firstClone.classList.add('clone');
+      lastClone.classList.add('clone');
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, slides[0]);
+
+      slides = Array.from(track.querySelectorAll('.carousel-slide'));
+      let index = 1;
+      let slideWidth = 0;
+
+      function computeSlideWidth() {
+        const slide = slides[0];
+        const style = window.getComputedStyle(slide);
+        const marginLeft = parseFloat(style.marginLeft) || 0;
+        const marginRight = parseFloat(style.marginRight) || 0;
+        slideWidth = slide.getBoundingClientRect().width + marginLeft + marginRight;
+      }
+
+      function jumpToIndex(newIndex) {
+        index = newIndex;
         track.style.transition = 'none';
-        index = 1;
         track.style.transform = `translateX(-${slideWidth * index}px)`;
       }
-      if (index === 0) {
-        track.style.transition = 'none';
-        index = slides.length - 2;
+
+      function moveToIndex(newIndex) {
+        index = newIndex;
+        track.style.transition = 'transform 0.4s ease-in-out';
         track.style.transform = `translateX(-${slideWidth * index}px)`;
       }
-    });
+
+      computeSlideWidth();
+      jumpToIndex(index);
+
+      nextBtn.addEventListener('click', () => {
+        if (index >= slides.length - 1) return;
+        moveToIndex(index + 1);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        if (index <= 0) return;
+        moveToIndex(index - 1);
+      });
+
+      track.addEventListener('transitionend', () => {
+        if (index === slides.length - 1) {
+          jumpToIndex(1);
+        }
+        if (index === 0) {
+          jumpToIndex(slides.length - 2);
+        }
+      });
+
+      let autoTimer = setInterval(() => {
+        if (index >= slides.length - 1) return;
+        moveToIndex(index + 1);
+      }, 5000);
+
+      window.addEventListener('resize', () => {
+        computeSlideWidth();
+        jumpToIndex(index);
+      });
+
+      container.addEventListener('mouseenter', () => {
+        clearInterval(autoTimer);
+      });
+
+      container.addEventListener('mouseleave', () => {
+        autoTimer = setInterval(() => {
+          if (index >= slides.length - 1) return;
+          moveToIndex(index + 1);
+        }, 5000);
+      });
+    })();
 
   </script>
 
+
+  <!-- Lightbox for Gallery View -->
+  <div id="gallery-lightbox" class="gallery-lightbox" onclick="closeGalleryLightbox()">
+    <span class="gallery-close" onclick="closeGalleryLightbox()">&times;</span>
+    <button class="gallery-prev" onclick="event.stopPropagation(); changeGalleryImage(-1)">&#10094;</button>
+    <img id="gallery-lightbox-img" src="" alt="Gallery Image">
+    <button class="gallery-next" onclick="event.stopPropagation(); changeGalleryImage(1)">&#10095;</button>
+  </div>
 
   <div id="lightbox" class="lightbox" onclick="closeFullImage()">
     <img id="lightbox-img" src="" alt="Full Image">
